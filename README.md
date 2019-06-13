@@ -3,3 +3,4 @@
 
 ## Authors
     [Eric Wafula Wanyama]
+    [Robert Kagema Njiriri]
