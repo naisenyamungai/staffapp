@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">staffapp</string>
+    <string name="title_activity_business_school">BusinessSchool</string>
 </resources>
