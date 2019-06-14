@@ -30,6 +30,7 @@ public class ProductLandingActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         PageAdapter pageAdapter=new PageAdapter(getSupportFragmentManager(),tabLayout.getTabCount());
         viewPager.setAdapter(pageAdapter);
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         toolbar.setTitle(getResources().getString(R.string.toolbar_title));
 //        setSupportActionBar(toolbar);
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
