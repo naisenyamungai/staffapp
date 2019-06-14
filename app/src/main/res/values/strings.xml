@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">staffapp</string>
-    <string name="title_activity_business_school">BusinessSchool</string>
+    <string name="activity__business_school"> Safaricom e-Learning</string>
 </resources>
