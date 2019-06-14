@@ -6,17 +6,27 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 public class PageAdapter extends FragmentPagerAdapter {
 
-    public PageAdapter(FragmentManager fm) {
+    private int numOfTabs;
+
+    public PageAdapter(FragmentManager fm, int numOfTabs) {
         super(fm);
+        this.numOfTabs=numOfTabs;
     }
 
     @Override
     public Fragment getItem(int position) {
-        return null;
+        switch (position){
+            case 0:
+                return new PersonalFragment();
+            case 1:
+                return new BusinessFragment();
+            default:
+                return null;
+        }
     }
 
     @Override
     public int getCount() {
-        return 0;
+        return numOfTabs;
     }
 }
