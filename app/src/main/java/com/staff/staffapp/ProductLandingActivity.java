@@ -49,7 +49,7 @@ public class ProductLandingActivity extends AppCompatActivity {
             }
         });
         toolbar.setTitle(getResources().getString(R.string.toolbar_title));
-//        setSupportActionBar(toolbar);
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }
