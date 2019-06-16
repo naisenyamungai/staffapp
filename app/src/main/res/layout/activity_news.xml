@@ -5,9 +5,17 @@
     android:layout_height="match_parent"
     android:background="@color/colorTextIcons">
 
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/newsSearchView"
+        android:gravity="right"/>
+
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/newsView"/>
+        android:id="@+id/newsListView"
+        android:layout_below="@+id/newsSearchView"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
