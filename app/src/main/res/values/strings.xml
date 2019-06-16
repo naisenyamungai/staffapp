@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">staffapp</string>
+    <string name="news_button">News</string>
 </resources>

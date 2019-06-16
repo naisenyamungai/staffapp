@@ -5,14 +5,13 @@
     android:layout_height="match_parent"
     android:background="@color/colorTextIcons">
 
-    <Button
-        android:id="@+id/newsActivityButton"
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/news_button"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:background="@color/colorThemeColor"
-        android:textColor="@color/colorTextIcons"/>
+        android:id="@+id/listView"/>
 
 </RelativeLayout>
