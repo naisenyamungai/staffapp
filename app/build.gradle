@@ -37,6 +37,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     implementation group: 'com.jakewharton', name: 'butterknife', version: '10.1.0'
+    annotationProcessor group: 'com.jakewharton', name: 'butterknife-compiler', version: '10.1.0'
+
     testImplementation group: 'org.robolectric', name: 'robolectric', version: '4.3'
     androidTestImplementation group: 'androidx.test', name: 'rules', version: '1.2.0'
 }
