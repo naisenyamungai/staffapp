@@ -2,9 +2,12 @@ package com.staff.staffapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.staff.staffapp.FAQ.FAQ;
 
 public class MainActivity extends AppCompatActivity {
     private Button mFAQButton;
@@ -18,7 +21,8 @@ public class MainActivity extends AppCompatActivity {
         mFAQButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                
+                Intent intent = new Intent(MainActivity.this, FAQ.class);
+                startActivity(intent);
             }
         });
     }
