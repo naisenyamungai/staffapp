@@ -9,11 +9,37 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FAQ.Leave"></activity>
-        <activity android:name=".FAQ.Jobs" />
-        <activity android:name=".FAQ.Ethics" />
-        <activity android:name=".FAQ.Contacts" />
-        <activity android:name=".FAQ.FAQ" />
+        <activity android:name=".FAQ.Leave">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.staff.staffapp.FAQ.FAQ">
+            </meta-data>
+        </activity>
+        <activity android:name=".FAQ.Jobs">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.staff.staffapp.FAQ.FAQ">
+            </meta-data>
+        </activity>
+        <activity android:name=".FAQ.Ethics">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.staff.staffapp.FAQ.FAQ">
+            </meta-data>
+        </activity>
+        <activity android:name=".FAQ.Contacts">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.staff.staffapp.FAQ.FAQ">
+            </meta-data>
+        </activity>
+        <activity android:name=".FAQ.FAQ">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.staff.staffapp.MainActivity">
+            </meta-data>
+        </activity>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
