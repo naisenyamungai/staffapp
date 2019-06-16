@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FAQ.Jobs"></activity>
+        <activity android:name=".FAQ.Leave"></activity>
+        <activity android:name=".FAQ.Jobs" />
         <activity android:name=".FAQ.Ethics" />
         <activity android:name=".FAQ.Contacts" />
         <activity android:name=".FAQ.FAQ" />
