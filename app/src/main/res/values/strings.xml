@@ -1,4 +1,8 @@
 <resources>
-    <string name="app_name">staffapp</string>
+
     <string name="activity__business_school"> Safaricom e-Learning</string>
+    <string name="title_featured">featured</string>
+    <string name="title_search">search</string>
+    <string name="title_profile">profile</string>
+    <string name="title_register">register</string>
 </resources>
