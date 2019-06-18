@@ -9,48 +9,48 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".FAQ.Emergency">
+            android:label="Emergency Contacts">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.staff.staffapp.FAQ.FAQ"></meta-data>
+        </activity>
         <activity
             android:name=".FAQ.Leave"
             android:label="Leave Days">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.staff.staffapp.FAQ.FAQ">
-            </meta-data>
+                android:value="com.staff.staffapp.FAQ.FAQ"></meta-data>
         </activity>
-
         <activity
             android:name=".FAQ.Jobs"
             android:label="Jobs">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.staff.staffapp.FAQ.FAQ">
-            </meta-data>
+                android:value="com.staff.staffapp.FAQ.FAQ"></meta-data>
         </activity>
-
-        <activity android:name=".FAQ.Ethics"
+        <activity
+            android:name=".FAQ.Ethics"
             android:label="Ethics HotLine">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.staff.staffapp.FAQ.FAQ">
-            </meta-data>
+                android:value="com.staff.staffapp.FAQ.FAQ"></meta-data>
         </activity>
-
-        <activity android:name=".FAQ.Contacts"
+        <activity
+            android:name=".FAQ.Contacts"
             android:label="Staff Contact Information">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.staff.staffapp.FAQ.FAQ">
-            </meta-data>
+                android:value="com.staff.staffapp.FAQ.FAQ"></meta-data>
         </activity>
 
-        <activity android:name=".FAQ.FAQ"
+        <activity
+            android:name=".FAQ.FAQ"
             android:label="Frequently Asked Questions">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.staff.staffapp.MainActivity">
-            </meta-data>
+                android:value="com.staff.staffapp.MainActivity"></meta-data>
         </activity>
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
