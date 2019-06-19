@@ -2,6 +2,8 @@ package com.staff.staffapp.FAQ;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ExpandableListView;
@@ -17,20 +19,34 @@ public class Emergency extends AppCompatActivity {
     private ExpandableListView listView;
     private ExpandableListAdapter listAdapter;
     private List<String> listDataHeader;
-    private HashMap<String,List<String>> listHash;
+    private HashMap<String, List<String>> listHash;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emergency);
 
-        listView = (ExpandableListView)findViewById(R.id.lvExp);
+        listView = (ExpandableListView) findViewById(R.id.lvExp);
         initData();
         listAdapter = new ExpandableListAdapter(this, listDataHeader, listHash);
         listView.setAdapter(listAdapter);
+
+        listView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+            @Override
+            public boolean onChildClick(ExpandableListView expandableListView, View view, int i, int i1, long l) {
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:" + listHash.get(listDataHeader.get(i)).get(i1)));
+                startActivity(intent);
+
+                return false;
+            }
+        });
+
+
     }
 
-    private void initData(){
+    private void initData() {
         listDataHeader = new ArrayList<>();
         listHash = new HashMap<>();
 
@@ -94,4 +110,5 @@ public class Emergency extends AppCompatActivity {
         listHash.put(listDataHeader.get(5), test);
 
     }
+
 }
