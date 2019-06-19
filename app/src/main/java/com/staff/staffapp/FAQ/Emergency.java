@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class Emergency extends AppCompatActivity implements View.OnClickListener{
+public class Emergency extends AppCompatActivity {
 
     private ExpandableListView listView;
     private ExpandableListAdapter listAdapter;
