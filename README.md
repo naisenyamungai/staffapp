@@ -5,7 +5,7 @@
             
 ## Author
         [George Mogaka]
-        [Margaret Opiata]
+        [Margaret Mutungi]
        
 
 ## Description
@@ -17,7 +17,7 @@ The Main Activity has a button that when clicked moves to the products and servi
 There are two tabs: Personal and Business tabs that one should be able to switch between by swiping or touching. The page contains and Up button that leads back to the Main Activity. 
 
 ## Setup
-Clone the project and build it locally on Android Studio then run on Android phone or el=mulator
+Clone the project and build it locally on Android Studio then run on Android phone or emulator
 
 
 ## Technologies Used
