@@ -17,6 +17,6 @@ public class Panel extends AppCompatActivity {
 
         attachment1 = (PDFView) findViewById(R.id.pdfAttachment1);
 
-        attachment1.fromAsset("medical.pdf").load();
+        attachment1.fromAsset("medical-nairobi.pdf").load();
     }
 }
