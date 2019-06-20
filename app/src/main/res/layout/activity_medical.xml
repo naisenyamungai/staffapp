@@ -4,12 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".FAQ.Medical">
 
-    <com.github.barteksc.pdfviewer.PDFView
-        android:id="@+id/pdfview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+    <Button
+        android:id="@+id/attachment1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="Prefered Medicical Provider Panel"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/attachment2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medical Card Replacement"
+        android:textSize="20sp"/>
+
+    <!--<com.github.barteksc.pdfviewer.PDFView-->
+        <!--android:id="@+id/pdfview"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"/>-->
 
     <!--<TextView-->
         <!--android:layout_width="wrap_content"-->
