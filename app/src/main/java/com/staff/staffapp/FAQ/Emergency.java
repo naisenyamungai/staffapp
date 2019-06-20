@@ -100,7 +100,8 @@ public class Emergency extends AppCompatActivity {
         List<String> test = new ArrayList<>();
         test.add("This is Sam Ngigi Number");
         test.add("0722 60 30 85");
-        test.add("0721 48 79 15");
+        test.add("0722 82 71 72");
+        test.add("0725 04 02 30");
 
 
         listHash.put(listDataHeader.get(0), safaricomSecurity);
