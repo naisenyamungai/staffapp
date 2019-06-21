@@ -9,11 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PersonalProductsActivity"></activity>
+        <activity android:name=".PersonalProductsActivity"
+            android:theme="@style/ProductsTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ProductsActivity" />
+        </activity>
         <activity
             android:theme="@style/ProductsTheme"
-            android:name=".ProductsActivity" />
-        <activity android:name=".BusinessProductsActivity" />
+            android:name=".ProductsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ProductsActivity" />
+        </activity>
+        <activity android:name=".BusinessProductsActivity"
+            android:theme="@style/ProductsTheme"/>
         <activity
             android:name=".ProductLandingActivity"
             android:theme="@style/ProductsTheme">
