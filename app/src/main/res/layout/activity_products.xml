@@ -13,6 +13,7 @@
         android:padding="20dp"
         android:background="@android:color/black"
         android:id="@+id/appbarId"
+
         android:elevation="0dp">
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="100dp"
@@ -22,19 +23,28 @@
             android:layout_marginBottom="10dp"
             android:src="@drawable/knowledge"/>
 
-        <EditText
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Type your question here"
-            android:background="@color/colorTextIcons"
-            android:padding="10dp"/>
+            android:background="@android:color/black"
+            android:textColor="@color/colorTextIcons"
+            android:textSize="16dp"
+            android:layout_gravity="center"
+            android:text="Knowledge is Power" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="Search"
-            android:background="@color/colorAccent" />
+        <!--<EditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="Type your question here"-->
+            <!--android:background="@color/colorTextIcons"-->
+            <!--android:padding="10dp"/>-->
+
+        <!--<Button-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:text="Search"-->
+            <!--android:background="@color/colorAccent" />-->
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.cardview.widget.CardView
