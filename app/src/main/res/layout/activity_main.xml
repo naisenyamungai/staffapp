@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:text="FAQ"
         android:id="@+id/faq_button"
-        android:background="@color/red"
+        android:background="@color/safgreen"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"/>
 

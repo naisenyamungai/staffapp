@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context=".FAQ.Medical"
     android:padding="10dp"
-    android:background="#fcfcfc">
+    android:background="@color/colorStone">
 
     <!--<Button-->
         <!--android:id="@+id/attachment1"-->
@@ -79,7 +79,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:background="@color/lightgray"
-                            />
+                            android:layout_margin="10dp"/>
                         <!--<TextView-->
                             <!--android:layout_width="wrap_content"-->
                             <!--android:layout_height="wrap_content"-->
@@ -119,7 +119,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:background="@color/lightgray"
-                            />
+                            android:layout_margin="10dp"/>
                         <!--<TextView-->
                             <!--android:layout_width="wrap_content"-->
                             <!--android:layout_height="wrap_content"-->
@@ -159,7 +159,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:background="@color/lightgray"
-                            />
+                            android:layout_margin="10dp"/>
                         <!--<TextView-->
                             <!--android:layout_width="wrap_content"-->
                             <!--android:layout_height="wrap_content"-->
@@ -207,7 +207,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:background="@color/lightgray"
-                            />
+                            android:layout_margin="10dp"/>
                         <!--<TextView-->
                             <!--android:layout_width="wrap_content"-->
                             <!--android:layout_height="wrap_content"-->
@@ -286,7 +286,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:background="@color/lightgray"
-                            />
+                            android:layout_margin="10dp"/>
                         <!--<TextView-->
                             <!--android:layout_width="wrap_content"-->
                             <!--android:layout_height="wrap_content"-->
@@ -334,7 +334,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:background="@color/lightgray"
-                            />
+                            android:layout_margin="10dp"/>
                         <!--<TextView-->
                             <!--android:layout_width="wrap_content"-->
                             <!--android:layout_height="wrap_content"-->
@@ -374,7 +374,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:background="@color/lightgray"
-                           />
+                            android:layout_margin="10dp"/>
                         <!--<TextView-->
                             <!--android:layout_width="wrap_content"-->
                             <!--android:layout_height="wrap_content"-->
@@ -412,7 +412,8 @@
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="@color/lightgray" />
+                            android:background="@color/lightgray"
+                            android:layout_margin="10dp"/>
                         <!--<TextView-->
                             <!--android:layout_width="wrap_content"-->
                             <!--android:layout_height="wrap_content"-->
@@ -459,7 +460,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:background="@color/lightgray"
-                           />
+                            android:layout_margin="10dp"/>
                         <!--<TextView-->
                             <!--android:layout_width="wrap_content"-->
                             <!--android:layout_height="wrap_content"-->
@@ -499,7 +500,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:background="@color/lightgray"
-                           />
+                            android:layout_margin="10dp"/>
                         <!--<TextView-->
                             <!--android:layout_width="wrap_content"-->
                             <!--android:layout_height="wrap_content"-->
@@ -538,7 +539,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:background="@color/lightgray"
-                            />
+                            android:layout_margin="10dp"/>
                         <!--<TextView-->
                             <!--android:layout_width="wrap_content"-->
                             <!--android:layout_height="wrap_content"-->
@@ -585,7 +586,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:background="@color/lightgray"
-                            />
+                            android:layout_margin="10dp"/>
                         <!--<TextView-->
                             <!--android:layout_width="wrap_content"-->
                             <!--android:layout_height="wrap_content"-->
