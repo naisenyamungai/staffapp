@@ -43,16 +43,18 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/nairobi_card"
-                    android:layout_width="110dp"
+                    android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_margin="4dp">
+                    android:layout_margin="5dp"
+                    style="@style/MyCardViewStyle"
+                    >
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:gravity="center"
-                        android:background="@color/colorGrapeFruit">
+                        android:background="@color/colorKelly">
                         <!--<ImageView-->
                             <!--android:layout_width="64dp"-->
                             <!--android:layout_height="64dp"-->
@@ -81,16 +83,18 @@
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
                     android:id="@+id/coast_card"
-                    android:layout_width="110dp"
+                    android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_margin="4dp">
+                    android:layout_margin="5dp"
+                    style="@style/MyCardViewStyle"
+                    >
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:gravity="center"
-                        android:background="@color/colorBitterSweet">
+                        android:background="@color/colorOlympic">
                         <!--<ImageView-->
                             <!--android:layout_width="64dp"-->
                             <!--android:layout_height="64dp"-->
@@ -119,16 +123,18 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/nyanza_card"
-                    android:layout_width="110dp"
+                    android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_margin="4dp">
+                    android:layout_margin="5dp"
+                    style="@style/MyCardViewStyle"
+                    >
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:gravity="center"
-                        android:background="@color/colorFlower">
+                        android:background="@color/colorMulberry">
                         <!--<ImageView-->
                             <!--android:layout_width="64dp"-->
                             <!--android:layout_height="64dp"-->
@@ -166,9 +172,10 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/eastern_card"
-                    android:layout_width="110dp"
+                    android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_margin="4dp">
+                    android:layout_margin="5dp"
+                    style="@style/MyCardViewStyle">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -191,7 +198,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:background="@color/lightgray"
-                            android:layout_margin="10dp"/>
+                            />
                         <!--<TextView-->
                             <!--android:layout_width="wrap_content"-->
                             <!--android:layout_height="wrap_content"-->
@@ -205,10 +212,10 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/north_card"
-                    android:layout_width="110dp"
+                    android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_margin="4dp"
-                    android:background="@color/colorBlueJeans">
+                    android:layout_margin="5dp"
+                    style="@style/MyCardViewStyle">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -244,10 +251,10 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/central_card"
-                    android:layout_width="110dp"
+                    android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_margin="4dp"
-                    android:background="@color/colorLavander">
+                    android:layout_margin="5dp"
+                    style="@style/MyCardViewStyle">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -270,7 +277,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:background="@color/lightgray"
-                            android:layout_margin="10dp"/>
+                            />
                         <!--<TextView-->
                             <!--android:layout_width="wrap_content"-->
                             <!--android:layout_height="wrap_content"-->
@@ -292,9 +299,10 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/overseas_card"
-                    android:layout_width="110dp"
+                    android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_margin="4dp">
+                    android:layout_margin="5dp"
+                    style="@style/MyCardViewStyle">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -317,7 +325,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:background="@color/lightgray"
-                            android:layout_margin="10dp"/>
+                            />
                         <!--<TextView-->
                             <!--android:layout_width="wrap_content"-->
                             <!--android:layout_height="wrap_content"-->
@@ -331,9 +339,10 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/ambulance_card"
-                    android:layout_width="110dp"
+                    android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_margin="4dp">
+                    android:layout_margin="5dp"
+                    style="@style/MyCardViewStyle">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -356,7 +365,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:background="@color/lightgray"
-                            android:layout_margin="10dp"/>
+                           />
                         <!--<TextView-->
                             <!--android:layout_width="wrap_content"-->
                             <!--android:layout_height="wrap_content"-->
@@ -369,10 +378,10 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/pharmacies_card"
-                    android:layout_width="110dp"
+                    android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_margin="4dp"
-                    android:background="@color/colorPinkRose">
+                    android:layout_margin="5dp"
+                    style="@style/MyCardViewStyle">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -394,8 +403,7 @@
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="@color/lightgray"
-                            android:layout_margin="10dp"/>
+                            android:background="@color/lightgray" />
                         <!--<TextView-->
                             <!--android:layout_width="wrap_content"-->
                             <!--android:layout_height="wrap_content"-->
@@ -416,15 +424,17 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/physiotherapy_card"
-                    android:layout_width="110dp"
+                    android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_margin="4dp">
+                    android:layout_margin="5dp"
+                    style="@style/MyCardViewStyle">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
-                        android:gravity="center">
+                        android:gravity="center"
+                        android:background="@color/colorChartreuse">
                         <!--<ImageView-->
                             <!--android:layout_width="64dp"-->
                             <!--android:layout_height="64dp"-->
@@ -440,7 +450,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:background="@color/lightgray"
-                            android:layout_margin="10dp"/>
+                           />
                         <!--<TextView-->
                             <!--android:layout_width="wrap_content"-->
                             <!--android:layout_height="wrap_content"-->
@@ -454,15 +464,17 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/radiology_card"
-                    android:layout_width="110dp"
+                    android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_margin="4dp">
+                    android:layout_margin="5dp"
+                    style="@style/MyCardViewStyle">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
-                        android:gravity="center">
+                        android:gravity="center"
+                        android:background="@color/colorJungle">
                         <!--<ImageView-->
                             <!--android:layout_width="64dp"-->
                             <!--android:layout_height="64dp"-->
@@ -478,7 +490,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:background="@color/lightgray"
-                            android:layout_margin="10dp"/>
+                           />
                         <!--<TextView-->
                             <!--android:layout_width="wrap_content"-->
                             <!--android:layout_height="wrap_content"-->
@@ -491,15 +503,17 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/labs_card"
-                    android:layout_width="110dp"
+                    android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_margin="4dp">
+                    android:layout_margin="5dp"
+                    style="@style/MyCardViewStyle">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
-                        android:gravity="center">
+                        android:gravity="center"
+                        android:background="@color/colorPlum">
                         <!--<ImageView-->
                             <!--android:layout_width="64dp"-->
                             <!--android:layout_height="64dp"-->
@@ -515,7 +529,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:background="@color/lightgray"
-                            android:layout_margin="10dp"/>
+                            />
                         <!--<TextView-->
                             <!--android:layout_width="wrap_content"-->
                             <!--android:layout_height="wrap_content"-->
@@ -536,15 +550,17 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/nursing_card"
-                    android:layout_width="110dp"
+                    android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_margin="4dp">
+                    android:layout_margin="5dp"
+                    style="@style/MyCardViewStyle">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
-                        android:gravity="center">
+                        android:gravity="center"
+                        android:background="@color/colorSteel">
                         <!--<ImageView-->
                         <!--android:layout_width="64dp"-->
                         <!--android:layout_height="64dp"-->
@@ -560,7 +576,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:background="@color/lightgray"
-                            android:layout_margin="10dp"/>
+                            />
                         <!--<TextView-->
                             <!--android:layout_width="wrap_content"-->
                             <!--android:layout_height="wrap_content"-->
