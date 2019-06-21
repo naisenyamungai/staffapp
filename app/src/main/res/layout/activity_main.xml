@@ -1,49 +1,305 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainActivity">
-    <Button
-        android:id="@+id/viewProductsButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/faq_button"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="59dp"
-        android:background="@color/safgreen"
-        android:text="PRODUCTS"
-        android:textColor="@color/colorTextIcons" />
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context="com.staff.staffapp.MainActivity">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="FAQ"
-        android:id="@+id/faq_button"
-        android:background="@color/safgreen"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:textColor="@color/colorTextIcons"/>
 
-    <Button
-        android:id="@+id/newsActivityButton"
+    <RelativeLayout
         android:layout_width="match_parent"
+        android:layout_height="318dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="303dp"
+            android:background="@color/profileBackground"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/kim_profile"
+                app:civ_border_color="#00C853"
+                app:civ_border_width="0dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="2dp"
+                android:text="Kim Chepkoit"
+                android:textColor="#fff"
+                android:textSize="15sp"
+                android:textStyle="" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="1dp"
+                android:text="RAN Engineer"
+                android:textColor="#fff"
+                android:textSize="12sp"
+                android:textStyle="" />
+        </LinearLayout>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="375dp"
+            android:layout_height="125dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="175dp"
+            android:baselineAligned="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:baselineAligned="false"
+                android:weightSum="5">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/contacts_icon"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+
+                        android:layout_marginTop="20dp"
+                        android:clickable="true"
+                        android:orientation="horizontal"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/untitled_design_3"
+
+                        app:civ_border_color="#00C853"
+                        app:civ_border_width="1dp"
+                        android:focusable="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Contacts"
+                        android:textSize="10sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/icon_2"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+
+                        android:layout_marginTop="20dp"
+                        android:clickable="true"
+                        android:orientation="horizontal"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/chat_design_1"
+                        app:civ_border_color="#00C853"
+                        app:civ_border_width="1dp"
+                        android:focusable="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chat"
+                        android:textSize="10sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/icon_3"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+
+                        android:layout_marginTop="20dp"
+                        android:clickable="true"
+                        android:orientation="horizontal"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/contacts_design"
+                        app:civ_border_color="#00C853"
+                        app:civ_border_width="1dp"
+                        android:focusable="true" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="e-Class"
+                        android:textSize="10sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/icon_4"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+
+                        android:layout_marginTop="20dp"
+                        android:clickable="true"
+                        android:orientation="horizontal"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/products_design"
+                        app:civ_border_color="#00C853"
+                        app:civ_border_width="1dp"
+                        android:focusable="true" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Products Services"
+                        android:textSize="10sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/icon_5"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+
+                        android:layout_marginTop="20dp"
+                        android:clickable="true"
+                        android:orientation="horizontal"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/faqs_design"
+                        app:civ_border_color="#00C853"
+                        app:civ_border_width="1dp"
+                        android:focusable="true" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FAQs"
+                        android:textSize="10sp" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+    <!-- Here starts scrolling - view all content -->
+
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="119dp"
-        android:background="@color/colorThemeColor"
-        android:text="@string/news_button"
-        android:textColor="@color/colorTextIcons" />
+        android:layout_gravity="center_horizontal"
+        android:text="Get all Masoko Hot Deals Now!"
+        android:textSize="20sp" />
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="127dp"
+
+        android:layout_marginBottom="8dp" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="181dp"
-        android:background="@color/colorThemeColor"
-        android:text="Safaricom Business School"
-        android:textColor="@color/colorTextIcons" />
+        android:layout_gravity="center_horizontal"
+        android:text="Trending News!"
+        android:textSize="20sp" />
 
-</RelativeLayout>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@color/colorAccent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bob_news"
+                android:contentDescription="TODO" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:isScrollContainer="true"
+                android:keepScreenOn="true"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:text=""
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Safaricom Home Fibre was launched more than two years ago.
+                Its popularity has grown expeditiously, although it is not without controversy
+                that has never really been settled to date. Nonetheless, Home Fibre’s growth has
+                been marked the introduction of new features such as the Plus option that added
+                voice minutes for an extra, and an insurance option that went live in Q4 2018."
+                    android:textColor="#555" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
