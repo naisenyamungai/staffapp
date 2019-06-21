@@ -16,10 +16,11 @@ import butterknife.ButterKnife;
 public class BusinessProductsActivity extends AppCompatActivity {
 
     @BindView(R.id.lvExpandable) ExpandableListView listView;
+    @BindView(R.id.toolbar) Toolbar toolbar;
     private ExpandableListAdapter listAdapter;
     private List<String> listDataHeader;
     private HashMap<String,List<String>> listHash;
-    @BindView(R.id.toolbar) Toolbar toolbar;
+
 
 
     @Override
@@ -31,6 +32,10 @@ public class BusinessProductsActivity extends AppCompatActivity {
         initData();
         listAdapter=new ExpandableListAdapter(this,listDataHeader,listHash);
         listView.setAdapter(listAdapter);
+
+        toolbar.setTitle(getResources().getString(R.string.toolbar_title_business));
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     private void initData() {

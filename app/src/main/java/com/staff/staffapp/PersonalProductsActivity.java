@@ -1,6 +1,7 @@
 package com.staff.staffapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.widget.ExpandableListView;
@@ -9,22 +10,30 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class PersonalProductsActivity extends AppCompatActivity {
 
-    private ExpandableListView listView;
     private ExpandableListAdapter listAdapter;
     private List<String> listDataHeader;
     private HashMap<String,List<String>> listHash;
+    @BindView(R.id.lvExpandable) ExpandableListView listView;
+    @BindView(R.id.toolbar) Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_business_products);
+        ButterKnife.bind(this);
 
-        listView = (ExpandableListView)findViewById(R.id.lvExpandable);
         initData();
         listAdapter=new ExpandableListAdapter(this,listDataHeader,listHash);
         listView.setAdapter(listAdapter);
+
+        toolbar.setTitle(getResources().getString(R.string.toolbar_title_personal));
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     private void initData() {
