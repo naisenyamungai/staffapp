@@ -1,9 +1,12 @@
 package com.staff.staffapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.google.android.material.appbar.AppBarLayout;
 
@@ -13,12 +16,11 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class ProductsActivity extends AppCompatActivity {
+public class ProductsActivity extends AppCompatActivity implements View.OnClickListener {
 
     @BindView(R.id.appbarId) AppBarLayout mProductsAppbar;
-//    @BindView(R.id.recyclerView) RecyclerView mRecyclerView;
-    ProductLandingData mLandingData;
-    LandingAdapter landingAdapter;
+    @BindView(R.id.cardviewBusiness) CardView mBusinessCv;
+    @BindView(R.id.cardviewPersonal) CardView mPersonalCv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,13 +28,19 @@ public class ProductsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_products);
         ButterKnife.bind(this);
 
-//        List<ProductLandingData> mTitleList=new ArrayList<>();
-//        mLandingData=new ProductLandingData("Business Products");
-//        mTitleList.add(mLandingData);
-//        mLandingData=new ProductLandingData("Personal Products");
-//        mTitleList.add(mLandingData);
-//
-//        landingAdapter=new LandingAdapter(ProductsActivity.this,mTitleList);
-//        mRecyclerView.setAdapter(landingAdapter);
+        mBusinessCv.setOnClickListener(this);
+        mPersonalCv.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View view) {
+        if(view==mBusinessCv){
+            Intent intent=new Intent(ProductsActivity.this,BusinessProductsActivity.class);
+            startActivity(intent);
+        }
+        if(view==mPersonalCv){
+            Intent intent=new Intent(ProductsActivity.this,PersonalProductsActivity.class);
+            startActivity(intent);
+        }
     }
 }

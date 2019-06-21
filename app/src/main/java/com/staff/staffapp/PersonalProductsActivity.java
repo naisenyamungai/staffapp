@@ -31,27 +31,32 @@ public class PersonalProductsActivity extends AppCompatActivity {
         listDataHeader=new ArrayList<>();
         listHash= new HashMap<>();
 
-        listDataHeader.add("One Connect Express");
-        listDataHeader.add("Cloud Storage");
+        listDataHeader.add("Fuliza");
+        listDataHeader.add("Okoa Stima");
 
 
-        List<String> oneconnect=new ArrayList<>();
-        oneconnect.add("This is a bundled communication package which offers a fixed voice landline and a fixed Internet connection transmitted through fibre.\n" +
+        List<String> fuliza=new ArrayList<>();
+        fuliza.add("Fuliza enables you to complete your M-PESA transactions when you have insufficient funds in your M-PESA account. You may access funds multiple times as long as you are within your Fuliza limit.\n" +
                 "\n" +
-                "With Safaricom One Connect Express, there is no need to invest in a separate fixed landline and internet. This is a hybrid (Post-pay & Pre-pay) solution and provides a communication package that bundles voice and unlimited internet at an affordable cost.");
-
-        List<String> cloudStorage=new ArrayList<>();
-        cloudStorage.add("Securely store information online on the Safaricom Cloud.\n" +
+                "Fuliza is available to all M-PESA customers, however the awarding of limits will depend on your credit viability and how long you have been using M-PESA. To repay your Fuliza simply deposit cash to your M-PESA or receive M-PESA and your Fuliza balance will be deducted automatically.\n" +
                 "\n" +
-                "Key Benefits of Cloud Storage\n" +
-                "Enables you to efficiently store, manage, and aggregate distributed big data across locations through a single pane of glass. Gain a common view and central management\n" +
-                "Seamless scalability, making it possible to add capacity, applications, locations or tenants to your cloud with zero need to develop or reconfigure\n" +
-                "Reduce administration time and ensure availability. Storage-as-a-service capability allows enterprises and service providers to meter capacity, bandwidth, and usage across tenants\n" +
-                "Enable users to self-manage and access storage. Easy storage access which provides flexible access across networks and platforms for traditional applications, web applications, Microsoft Windows, Linux, and mobile devices\n" +
-                "Allow users and applications instant access to data");
+                "To register for Fuliza simply dial *234# and select Fuliza. You need to be an M-PESA registered customers with an active Safaricom line.\n" +
+                "\n" +
+                "Keep transacting on M-PESA with Fuliza\n" +
+                "\n" +
+                "Dial *234# to Register");
 
-        listHash.put(listDataHeader.get(0),oneconnect);
-        listHash.put(listDataHeader.get(1),cloudStorage);
+        List<String> okoaStima=new ArrayList<>();
+        okoaStima.add("You can now get electricity when you need it then later pay later! Okoa Stima allows you to borrow any amount based on your pre-determined credit limit. This limit is based on your historical relationship with Kenya Power. The loan comes at a facility fee of 10% and is payable in 7 days.\n" +
+                "\n" +
+                "Your M-PESA account will be deducted with amount of top plus facility fee so there is no delay.\n" +
+                "\n" +
+                "You will be able to register up to 3 meters and tokens purchased/Bill paid cannot be used on another meter except the 3 you have registered.\n" +
+                "\n" +
+                "To take advantage of this great service just dial *885# from your mobile phone.");
+
+        listHash.put(listDataHeader.get(0),fuliza);
+        listHash.put(listDataHeader.get(1),okoaStima);
 
     }
 

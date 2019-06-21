@@ -37,13 +37,6 @@
             android:background="@color/colorAccent" />
     </com.google.android.material.appbar.AppBarLayout>
 
-    <!--<androidx.recyclerview.widget.RecyclerView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:id="@+id/recyclerView"-->
-        <!--android:scrollbars="vertical">-->
-    <!--</androidx.recyclerview.widget.RecyclerView>-->
-
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="100dp"
