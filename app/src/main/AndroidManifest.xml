@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FAQ.Physiotherapy"></activity>
+        <activity android:name=".FAQ.Radiology"></activity>
+        <activity android:name=".FAQ.Physiotherapy" />
         <activity android:name=".FAQ.Pharmacies" />
         <activity android:name=".FAQ.Ambulance" />
         <activity android:name=".FAQ.Overseas" />
