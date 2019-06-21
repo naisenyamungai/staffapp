@@ -7,16 +7,17 @@ import android.os.Bundle;
 import com.github.barteksc.pdfviewer.PDFView;
 import com.staff.staffapp.R;
 
-public class Eastern extends AppCompatActivity {
-    PDFView eastern;
+public class Nursing extends AppCompatActivity {
+    PDFView nursing;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_eastern);
+        setContentView(R.layout.activity_nursing);
 
-        eastern = (PDFView) findViewById(R.id.pdfEastern);
+        nursing = (PDFView) findViewById(R.id.pdfNursing);
 
-        eastern.fromAsset("medical-Eastern.pdf").load();
+        nursing.fromAsset("medical-Nursing.pdf").load();
+
     }
 }
