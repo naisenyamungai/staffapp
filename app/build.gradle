@@ -41,4 +41,7 @@ dependencies {
 
     testImplementation group: 'org.robolectric', name: 'robolectric', version: '4.3'
     androidTestImplementation group: 'androidx.test', name: 'rules', version: '1.2.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+
+    implementation group: 'com.squareup.picasso', name: 'picasso', version: '2.71828'
 }
