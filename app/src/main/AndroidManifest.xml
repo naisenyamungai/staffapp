@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FAQ.Radiology"></activity>
+        <activity android:name=".FAQ.Labs"></activity>
+        <activity android:name=".FAQ.Radiology" />
         <activity android:name=".FAQ.Physiotherapy" />
         <activity android:name=".FAQ.Pharmacies" />
         <activity android:name=".FAQ.Ambulance" />
