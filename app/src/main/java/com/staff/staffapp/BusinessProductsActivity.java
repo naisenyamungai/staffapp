@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class ProductsListActivity extends AppCompatActivity {
+public class BusinessProductsActivity extends AppCompatActivity {
 
     private ExpandableListView listView;
     private ExpandableListAdapter listAdapter;
@@ -19,7 +19,7 @@ public class ProductsListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_products_list);
+        setContentView(R.layout.activity_business_products);
 
         listView = (ExpandableListView)findViewById(R.id.lvExpandable);
         initData();
