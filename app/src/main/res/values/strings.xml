@@ -6,4 +6,5 @@
     <string name="title_register">register</string>
     <string name="card_text">demo_card_text</string>
     <string name="app_name">staffapp</string>
+    <string name="ruby">Ruby</string>
 </resources>
