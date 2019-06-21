@@ -77,6 +77,7 @@ public class Medical extends AppCompatActivity implements View.OnClickListener {
             case R.id.nyanza_card : i = new Intent(this, Nyanza.class); startActivity(i);  break;
             case R.id.eastern_card : i = new Intent(this, Eastern.class); startActivity(i); break;
             case R.id.north_card : i = new Intent(this, North.class); startActivity(i); break;
+            case R.id.central_card : i = new Intent(this, Central.class); startActivity(i); break;
             case R.id.overseas_card : i = new Intent(this, Overseas.class); startActivity(i); break;
             case R.id.ambulance_card : i = new Intent(this, Ambulance.class); startActivity(i); break;
             case R.id.pharmacies_card : i = new Intent(this, Pharmacies.class); startActivity(i); break;
