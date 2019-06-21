@@ -10,7 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".PersonalProductsActivity"></activity>
-        <activity android:name=".ProductsActivity" />
+        <activity
+            android:theme="@style/ProductsTheme"
+            android:name=".ProductsActivity" />
         <activity android:name=".BusinessProductsActivity" />
         <activity
             android:name=".ProductLandingActivity"
@@ -26,6 +28,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
