@@ -38,9 +38,10 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:gravity="center">
+
                     <ImageView
-                        android:layout_width="75dp"
-                        android:layout_height="75dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
                         android:src="@drawable/ic_call_black_24dp"
                         android:background="@drawable/circlebackgroundred"
                         android:paddingTop="10dp" />
@@ -79,9 +80,9 @@
                     android:orientation="vertical"
                     android:gravity="center">
                     <ImageView
-                        android:layout_width="75dp"
-                        android:layout_height="75dp"
-                        android:src="@drawable/ic_local_hospital_black_24dp"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:src="@drawable/baseline_local_hospital_white_24dp"
                         android:background="@drawable/circlebackgroundblue"
                         android:padding="10dp"/>
 
@@ -215,8 +216,8 @@
                         android:orientation="vertical"
                         android:gravity="center">
                         <ImageView
-                            android:layout_width="75dp"
-                            android:layout_height="75dp"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
                             android:background="@drawable/circlebackgroundpink"
                             android:src="@drawable/ic_report_problem_black_24dp"
                             android:padding="10dp"/>
@@ -255,8 +256,8 @@
                         android:orientation="vertical"
                         android:gravity="center">
                         <ImageView
-                            android:layout_width="75dp"
-                            android:layout_height="75dp"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
                             android:background="@drawable/circlebackgroundpurple"
                             android:src="@drawable/ic_contacts_black_24dp"
                             android:padding="10dp"/>
