@@ -1,6 +1,7 @@
 package com.staff.staffapp.FAQ;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
@@ -11,12 +12,14 @@ import com.staff.staffapp.R;
 
 public class FAQ extends AppCompatActivity implements View.OnClickListener {
 
+
     private CardView leaveCard,jobsCard,contactsCard,ethicsCard, emergencyCard, medicalCard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_faq);
+
         leaveCard = (CardView) findViewById(R.id.leave_card);
         jobsCard = (CardView) findViewById(R.id.jobs_card);
         contactsCard = (CardView) findViewById(R.id.contacts_card);
