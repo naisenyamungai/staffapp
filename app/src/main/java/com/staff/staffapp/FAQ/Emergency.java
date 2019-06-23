@@ -59,7 +59,7 @@ public class Emergency extends AppCompatActivity {
 
                     switch(menuItem.getItemId()){
                         case R.id.nav_home: i = new Intent(Emergency.this, MainActivity.class); startActivity(i); break;
-
+                        case R.id.back: i = new Intent(Emergency.this, FAQ.class); startActivity(i); break;
                     }
                     return true;
                 }

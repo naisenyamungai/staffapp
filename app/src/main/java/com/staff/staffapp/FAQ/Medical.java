@@ -64,7 +64,7 @@ public class Medical extends AppCompatActivity implements View.OnClickListener {
 
                     switch(menuItem.getItemId()){
                         case R.id.nav_home: i = new Intent(Medical.this, MainActivity.class); startActivity(i); break;
-
+                        case R.id.back: i = new Intent(Medical.this, FAQ.class); startActivity(i); break;
                     }
                     return true;
                 }

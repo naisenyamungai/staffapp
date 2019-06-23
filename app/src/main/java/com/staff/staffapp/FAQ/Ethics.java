@@ -30,7 +30,7 @@ public class Ethics extends AppCompatActivity {
 
                     switch(menuItem.getItemId()){
                         case R.id.nav_home: i = new Intent(Ethics.this, MainActivity.class); startActivity(i); break;
-
+                        case R.id.back: i = new Intent(Ethics.this, FAQ.class); startActivity(i); break;
                     }
                     return true;
                 }

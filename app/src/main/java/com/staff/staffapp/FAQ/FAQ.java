@@ -54,7 +54,9 @@ public class FAQ extends AppCompatActivity implements View.OnClickListener {
                     switch(menuItem.getItemId()){
                         case R.id.nav_home: i = new Intent(FAQ.this, MainActivity.class); startActivity(i); break;
 
-                    }
+                        case R.id.back: i = new Intent(FAQ.this, MainActivity.class); startActivity(i); break;
+
+                        }
                     return true;
                 }
             };
