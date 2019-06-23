@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".FAQ.Medical"
-    android:background="#DADFE5">
+    android:background="@color/white">
 
 
     <ScrollView
@@ -22,8 +22,8 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:text="MEDICAL SPECIALISTS"
+                android:layout_height="80dp"
+                android:text="Medical Specialists"
                 android:textSize="30dp"
                 android:textStyle="bold"
                 android:gravity="center"
