@@ -1,13 +1,19 @@
 package com.staff.staffapp.FAQ;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.staff.staffapp.MainActivity;
 import com.staff.staffapp.R;
 
 public class FAQ extends AppCompatActivity implements View.OnClickListener {
@@ -33,7 +39,25 @@ public class FAQ extends AppCompatActivity implements View.OnClickListener {
         ethicsCard.setOnClickListener(this);
         emergencyCard.setOnClickListener(this);
         medicalCard.setOnClickListener(this);
+
+        BottomNavigationView bottomNav = (BottomNavigationView) findViewById(R.id.bottomNav);
+        bottomNav.setOnNavigationItemSelectedListener(navListener);
+
     }
+
+    private BottomNavigationView.OnNavigationItemSelectedListener navListener =
+            new BottomNavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                    Intent i;
+
+                    switch(menuItem.getItemId()){
+                        case R.id.nav_home: i = new Intent(FAQ.this, MainActivity.class); startActivity(i); break;
+
+                    }
+                    return true;
+                }
+            };
 
     @Override
     public void onClick(View v) {

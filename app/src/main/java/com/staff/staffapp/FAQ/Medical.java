@@ -1,14 +1,18 @@
 package com.staff.staffapp.FAQ;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
 import com.github.barteksc.pdfviewer.PDFView;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.staff.staffapp.MainActivity;
 import com.staff.staffapp.R;
 
 public class Medical extends AppCompatActivity implements View.OnClickListener {
@@ -47,25 +51,25 @@ public class Medical extends AppCompatActivity implements View.OnClickListener {
         radiologyCard.setOnClickListener(this);
         labsCard.setOnClickListener(this);
         nursingCard.setOnClickListener(this);
+
+        BottomNavigationView bottomNav = (BottomNavigationView) findViewById(R.id.bottomNav);
+        bottomNav.setOnNavigationItemSelectedListener(navListener);
     }
 
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_medical);
-//
-//        btn_attachment1 = (Button) findViewById(R.id.attachment1);
-//        btn_attachment2 = (Button) findViewById(R.id.attachment2);
-//
-//        btn_attachment1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent i = new Intent(Medical.this, Panel.class);
-//                startActivity(i);
-//            }
-//        });
-//    }
+    private BottomNavigationView.OnNavigationItemSelectedListener navListener =
+            new BottomNavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                    Intent i;
+
+                    switch(menuItem.getItemId()){
+                        case R.id.nav_home: i = new Intent(Medical.this, MainActivity.class); startActivity(i); break;
+
+                    }
+                    return true;
+                }
+            };
+
 
     @Override
     public void onClick(View view) {
