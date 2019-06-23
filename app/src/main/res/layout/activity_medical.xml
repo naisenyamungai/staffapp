@@ -6,22 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".FAQ.Medical"
-
-    android:background="@color/colorStone">
-
-    <!--<Button-->
-        <!--android:id="@+id/attachment1"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:text="Prefered Medicical Provider Panel"-->
-        <!--android:textSize="20sp"/>-->
-
-    <!--<Button-->
-        <!--android:id="@+id/attachment2"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="Medical Card Replacement"-->
-        <!--android:textSize="20sp"/>-->
+    android:background="#DADFE5">
 
 
     <ScrollView
@@ -33,7 +18,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="10dp">
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="MEDICAL SPECIALISTS"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="#5E7A9F"/>
             
             <!--<TextView-->
                 <!--android:layout_width="match_parent"-->
@@ -50,7 +45,8 @@
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:padding="10dp">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/nairobi_card"

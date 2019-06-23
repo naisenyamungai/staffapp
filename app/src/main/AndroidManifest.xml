@@ -90,6 +90,7 @@
         <activity android:name=".FAQ.Panel" />
         <activity
             android:name=".FAQ.Medical"
+            android:theme="@style/LeaveTheme"
             android:label="Medical Specialists">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -104,6 +105,7 @@
         </activity>
         <activity
             android:name=".FAQ.Leave"
+            android:theme="@style/LeaveTheme"
             android:label="Leave Days">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -111,6 +113,7 @@
         </activity>
         <activity
             android:name=".FAQ.Jobs"
+            android:theme="@style/LeaveTheme"
             android:label="Jobs">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -132,6 +135,7 @@
         </activity>
         <activity
             android:name=".FAQ.FAQ"
+            android:theme="@style/FaqTheme"
             android:label="Frequently Asked Questions">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

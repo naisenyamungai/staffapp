@@ -6,29 +6,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@drawable/rectanglebackgroundwhite">
+    android:background="#DADFE5"
+    >
+    <!--android:background="@drawable/rectanglebackgroundwhite"-->
+
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="10dp"
-        android:layout_above="@id/bottomNav"
-        >
+        android:layout_above="@id/bottomNav">
+        <!--android:padding="10dp"-->
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="10dp"
+            android:orientation="vertical">
+            <!--android:padding="10dp"-->
 
-            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@drawable/faq2"
+                android:textSize="50dp"
+                android:gravity="center"
+                android:textColor="@color/colorBlack"/>
+            <!--android:text="FAQ"-->
 
         <LinearLayout
             android:clipToPadding="false"
             android:gravity="center"
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="10dp">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/emergency_card"
@@ -298,5 +309,6 @@
         android:background="?android:attr/windowBackground">
         <!--app:itemTextColor="@color/white"-->
         <!--android:background="@color/safgreen"-->
+        <!--android:background="?android:attr/windowBackground"-->
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 </RelativeLayout>
