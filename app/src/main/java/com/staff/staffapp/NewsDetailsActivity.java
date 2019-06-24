@@ -9,6 +9,9 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.widget.ProgressBar;
 
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 public class NewsDetailsActivity extends AppCompatActivity {
     WebView webView_newsdetails;
     ProgressBar loader_newsdetails;
@@ -39,6 +42,8 @@ public class NewsDetailsActivity extends AppCompatActivity {
            }
         }
     });
+
+
 
     }
 
