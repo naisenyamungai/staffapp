@@ -11,9 +11,12 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.List;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -36,17 +39,17 @@ public class NewsActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, news);
-        mNewsList.setAdapter(adapter);
-
-        mNewsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(NewsActivity.this, NewsDetailsActivity.class);
-                startActivity(intent);
-            }
-        });
+//        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, news);
+//        mNewsList.setAdapter(adapter);
+//
+//        mNewsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                Intent intent = new Intent(NewsActivity.this, NewsDetailsActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://apisafapp.herokuapp.com")
@@ -58,10 +61,15 @@ public class NewsActivity extends AppCompatActivity {
         mNewsActivityButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
+                Call<List> createCall = service.all();
 
             }
+
+//            @Override
+//            public void onFailure(Call<List> _, Throwable throwable) {
+//                throwable.printStackTrace();
+//                mAllNews.setText(throwable.getMessage());
+//            }
         });
     }
 }
