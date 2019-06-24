@@ -59,6 +59,8 @@ public class NewsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+
+
             }
         });
     }
