@@ -72,6 +72,7 @@ public class Emergency extends AppCompatActivity {
         listDataHeader.add("SafaricomSecurity");
         listDataHeader.add("MINET");
         listDataHeader.add("Ambulance");
+        listDataHeader.add("AirEvacuation");
         listDataHeader.add("SafaricomEmergency");
         listDataHeader.add("AutomobileAssociation");
         listDataHeader.add("Test");
@@ -92,7 +93,20 @@ public class Emergency extends AppCompatActivity {
 
         List<String> ambulance = new ArrayList<>();
         ambulance.add("This the ambulance number");
-        ambulance.add("0719 04 44 44");
+        ambulance.add("0700 39 53 95");
+        ambulance.add("0738 39 53 95");
+        ambulance.add("0725 22 52 25");
+        ambulance.add("0707 86 17 44");
+        ambulance.add("0726 79 30 11");
+        ambulance.add("0728 91 80 00");
+        ambulance.add("0723 93 76 30");
+
+        List<String> airEvacuation = new ArrayList<>();
+        airEvacuation.add("This the ambulance number");
+        airEvacuation.add("0722 60 06 00");
+        airEvacuation.add("0733 60 06 00");
+        airEvacuation.add("0722 31 42 39");
+        airEvacuation.add("0736 35 93 62");
 
         List<String> safaricomEmergency = new ArrayList<>();
         safaricomEmergency.add("These are safaricom security desk emergency numbers");
@@ -126,9 +140,10 @@ public class Emergency extends AppCompatActivity {
         listHash.put(listDataHeader.get(0), safaricomSecurity);
         listHash.put(listDataHeader.get(1), minet);
         listHash.put(listDataHeader.get(2), ambulance);
-        listHash.put(listDataHeader.get(3), safaricomEmergency);
-        listHash.put(listDataHeader.get(4), automobileAssociation);
-        listHash.put(listDataHeader.get(5), test);
+        listHash.put(listDataHeader.get(3), airEvacuation);
+        listHash.put(listDataHeader.get(4), safaricomEmergency);
+        listHash.put(listDataHeader.get(5), automobileAssociation);
+        listHash.put(listDataHeader.get(6), test);
 
     }
 
