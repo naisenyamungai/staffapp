@@ -22,9 +22,9 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:text="Medical Specialists"
-                android:textSize="30dp"
+                android:layout_height="75dp"
+                android:text="Medical Providers"
+                android:textSize="25dp"
                 android:textStyle="bold"
                 android:gravity="center"
                 android:textColor="@color/white"

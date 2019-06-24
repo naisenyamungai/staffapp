@@ -28,7 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
                 android:background="@drawable/faq2"
-                android:textSize="50dp"
+                android:textSize="40dp"
                 android:gravity="center"
                 android:textColor="@color/colorBlack"/>
             <!--android:text="FAQ"-->
@@ -106,7 +106,7 @@
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
                         android:layout_marginTop="10dp"
-                        android:text="Medical Specialists"/>
+                        android:text="Medical Providers"/>
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"

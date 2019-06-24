@@ -127,8 +127,11 @@ public class Emergency extends AppCompatActivity {
         safaricomEmergency.add("0722 002 740");
 
         List<String> automobileAssociation = new ArrayList<>();
-        automobileAssociation.add("This the Automobile Association Towing Number");
-        automobileAssociation.add("0719 04 44 44");
+        automobileAssociation.add("Contact Automobile Association for Towing Services");
+        automobileAssociation.add("0709 93 30 00");
+        automobileAssociation.add("0709 93 39 99");
+        automobileAssociation.add("0720 22 72 67");
+        automobileAssociation.add("0720 26 15 76");
 
         List<String> test = new ArrayList<>();
         test.add("This is Sam Ngigi Number");
