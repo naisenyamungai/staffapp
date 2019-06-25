@@ -22,8 +22,8 @@ public class BusinessProductsActivity extends AppCompatActivity {
     @BindView(R.id.toolbar) Toolbar toolbar;
     private ExpandableListAdapter listAdapter;
     private List<String> listDataHeader;
+    private List<String> listDescription;
     private HashMap<String,List<String>> listHash;
-
 
 
     @Override

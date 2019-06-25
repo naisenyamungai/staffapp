@@ -8,8 +8,7 @@ public class Product {
     String title;
     String description;
 
-    public Product() {
-    }
+    public Product() { }
 
     public Product(int id, String title, String description) {
         this.id = id;
