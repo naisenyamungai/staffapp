@@ -1,13 +1,13 @@
-package com.staff.staffapp;
+package com.staff.staffapp.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
+
+import com.staff.staffapp.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         if(view==mViewProductsButton){
-            Intent intent=new Intent(MainActivity.this,ProductsActivity.class);
+            Intent intent=new Intent(MainActivity.this, ProductsActivity.class);
             startActivity(intent);
         }
     }

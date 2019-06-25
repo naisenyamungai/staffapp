@@ -9,23 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PersonalProductsActivity"
+        <activity android:name=".ui.PersonalProductsActivity"
             android:theme="@style/ProductsTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ProductsActivity" />
+                android:value=".ui.ProductsActivity" />
         </activity>
         <activity
             android:theme="@style/ProductsTheme"
-            android:name=".ProductsActivity" >
+            android:name=".ui.ProductsActivity" >
         </activity>
-        <activity android:name=".BusinessProductsActivity"
+        <activity android:name=".ui.BusinessProductsActivity"
             android:theme="@style/ProductsTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ProductsActivity" />
+                android:value=".ui.ProductsActivity" />
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,10 +1,13 @@
-package com.staff.staffapp;
+package com.staff.staffapp.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.widget.ExpandableListView;
+
+import com.staff.staffapp.adapter.ExpandableListAdapter;
+import com.staff.staffapp.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;

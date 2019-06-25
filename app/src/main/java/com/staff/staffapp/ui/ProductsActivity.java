@@ -1,17 +1,14 @@
-package com.staff.staffapp;
+package com.staff.staffapp.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import com.google.android.material.appbar.AppBarLayout;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.staff.staffapp.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
