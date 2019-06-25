@@ -23,7 +23,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class NewsActivity extends AppCompatActivity {
 
     @BindView(R.id.newsListView) ListView mNewsList;
-    @BindView(R.id.newsActivityButton) Button mNewsActivityButton;
+    @BindView(R.id.generalNewsButton) Button mgeneralNewsButton;
     @BindView(R.id.allNews) TextView mAllNews;
 
     private String[] news = new String[] {"Mi Mero Mole", "Mother's Bistro",
@@ -39,26 +39,26 @@ public class NewsActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-//        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, news);
-//        mNewsList.setAdapter(adapter);
-//
-//        mNewsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//
-//            @Override
-//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//                Intent intent = new Intent(NewsActivity.this, NewsDetailsActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, news);
+        mNewsList.setAdapter(adapter);
+
+        mNewsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(NewsActivity.this, NewsDetailsActivity.class);
+                startActivity(intent);
+            }
+        });
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://apisafapp.herokuapp.com")
+                .baseUrl("https://apisafapp.herokuapp.com/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
         final NewsService service = retrofit.create(NewsService.class);
 
-        mNewsActivityButton.setOnClickListener(new View.OnClickListener() {
+        mgeneralNewsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Call<List> createCall = service.all();

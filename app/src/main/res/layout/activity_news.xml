@@ -18,12 +18,24 @@
         android:id="@+id/allNews"/>
 
     <ListView
+        android:id="@+id/newsListView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/newsListView"
-        android:layout_below="@+id/newsSearchView"
         android:layout_above="@+id/departmentButton"
-        android:layout_alignParentEnd="true" />
+        android:layout_below="@+id/newsSearchView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="64dp" />
+
+    <Button
+        android:id="@+id/generalNewsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="56dp"
+        android:background="@color/colorThemeColor"
+        android:text="General News"
+        android:textColor="@color/colorTextIcons" />
 
     <Button
         android:layout_width="match_parent"
