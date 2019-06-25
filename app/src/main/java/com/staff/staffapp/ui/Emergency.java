@@ -1,4 +1,4 @@
-package com.staff.staffapp.FAQ;
+package com.staff.staffapp.ui;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.ExpandableListView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.staff.staffapp.MainActivity;
+import com.staff.staffapp.adapter.ExpandableListAdapter;
 import com.staff.staffapp.R;
 
 import java.util.ArrayList;

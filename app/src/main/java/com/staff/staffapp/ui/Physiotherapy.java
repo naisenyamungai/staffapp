@@ -1,4 +1,4 @@
-package com.staff.staffapp.FAQ;
+package com.staff.staffapp.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 

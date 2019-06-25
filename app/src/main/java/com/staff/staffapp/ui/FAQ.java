@@ -1,19 +1,15 @@
-package com.staff.staffapp.FAQ;
+package com.staff.staffapp.ui;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SwitchCompat;
-import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.staff.staffapp.MainActivity;
 import com.staff.staffapp.R;
 
 public class FAQ extends AppCompatActivity implements View.OnClickListener {

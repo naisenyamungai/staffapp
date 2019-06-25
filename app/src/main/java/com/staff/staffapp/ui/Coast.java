@@ -1,4 +1,4 @@
-package com.staff.staffapp.FAQ;
+package com.staff.staffapp.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,17 +7,17 @@ import android.os.Bundle;
 import com.github.barteksc.pdfviewer.PDFView;
 import com.staff.staffapp.R;
 
-public class Nursing extends AppCompatActivity {
-    PDFView nursing;
+public class Coast extends AppCompatActivity {
+
+    PDFView coast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nursing);
+        setContentView(R.layout.activity_coast);
 
-        nursing = (PDFView) findViewById(R.id.pdfNursing);
+        coast = (PDFView) findViewById(R.id.pdfCoast);
 
-        nursing.fromAsset("medical-Nursing.pdf").load();
-
+        coast.fromAsset("medical-coast.pdf").load();
     }
 }

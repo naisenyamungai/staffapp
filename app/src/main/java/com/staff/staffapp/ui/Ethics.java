@@ -1,4 +1,4 @@
-package com.staff.staffapp.FAQ;
+package com.staff.staffapp.ui;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,15 +8,14 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.staff.staffapp.MainActivity;
 import com.staff.staffapp.R;
 
-public class Contacts extends AppCompatActivity {
+public class Ethics extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_contacts);
+        setContentView(R.layout.activity_ethics);
 
         BottomNavigationView bottomNav = (BottomNavigationView) findViewById(R.id.bottomNav);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
@@ -29,8 +28,8 @@ public class Contacts extends AppCompatActivity {
                     Intent i;
 
                     switch(menuItem.getItemId()){
-                        case R.id.nav_home: i = new Intent(Contacts.this, MainActivity.class); startActivity(i); break;
-                        case R.id.back: i = new Intent(Contacts.this, FAQ.class); startActivity(i); break;
+                        case R.id.nav_home: i = new Intent(Ethics.this, MainActivity.class); startActivity(i); break;
+                        case R.id.back: i = new Intent(Ethics.this, FAQ.class); startActivity(i); break;
                     }
                     return true;
                 }

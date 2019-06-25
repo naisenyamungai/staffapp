@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".FAQ.Medical"
+    tools:context=".ui.Medical"
     android:background="@color/white">
 
 

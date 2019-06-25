@@ -6,8 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-
-    tools:context="com.staff.staffapp.FAQ.Emergency">
+    android:layout_above="@id/bottomNav"
+    android:background="@drawable/rectanglebackgroundwhite"
+    tools:context="com.staff.staffapp.ui.Emergency">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,7 +17,7 @@
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
         android:paddingTop="30dp"
-        android:layout_above="@id/bottomNav">
+    >
 
         <ExpandableListView
             android:id="@+id/lvExp"
@@ -26,6 +27,17 @@
         </ExpandableListView>
 
     </LinearLayout>
+
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_above="@id/bottomNav"-->
+        <!--android:id="@+id/backgreen"-->
+        <!--android:background="@drawable/rectanglebackgroundgreen">-->
+
+    <!--</View>-->
+
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNav"

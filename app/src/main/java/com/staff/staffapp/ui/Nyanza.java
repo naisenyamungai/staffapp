@@ -1,4 +1,4 @@
-package com.staff.staffapp.FAQ;
+package com.staff.staffapp.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,16 +7,16 @@ import android.os.Bundle;
 import com.github.barteksc.pdfviewer.PDFView;
 import com.staff.staffapp.R;
 
-public class Eastern extends AppCompatActivity {
-    PDFView eastern;
+public class Nyanza extends AppCompatActivity {
+    PDFView nyanza;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_eastern);
+        setContentView(R.layout.activity_nyanza);
 
-        eastern = (PDFView) findViewById(R.id.pdfEastern);
+        nyanza = (PDFView) findViewById(R.id.pdfNyanza);
 
-        eastern.fromAsset("medical-Eastern.pdf").load();
+        nyanza.fromAsset("medical-nyanza.pdf").load();
     }
 }

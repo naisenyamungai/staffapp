@@ -1,4 +1,4 @@
-package com.staff.staffapp.FAQ;
+package com.staff.staffapp.adapter;
 
 import android.content.Context;
 import android.graphics.Typeface;
