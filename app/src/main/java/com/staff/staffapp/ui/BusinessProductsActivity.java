@@ -8,22 +8,29 @@ import android.widget.ExpandableListView;
 
 import com.staff.staffapp.adapter.ExpandableListAdapter;
 import com.staff.staffapp.R;
+import com.staff.staffapp.model.Product;
+import com.staff.staffapp.service.ProductsService;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.Response;
 
 public class BusinessProductsActivity extends AppCompatActivity {
 
-    @BindView(R.id.lvExpandable) ExpandableListView listView;
-    @BindView(R.id.toolbar) Toolbar toolbar;
     private ExpandableListAdapter listAdapter;
     private List<String> listDataHeader;
-    private List<String> listDescription;
     private HashMap<String,List<String>> listHash;
+    private List<Product> products;
+    @BindView(R.id.lvExpandable) ExpandableListView listView;
+    @BindView(R.id.toolbar) Toolbar toolbar;
+    private List<String> listDescription;
 
 
     @Override
@@ -32,39 +39,42 @@ public class BusinessProductsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_business_products);
         ButterKnife.bind(this);
 
-        initData();
-        listAdapter=new ExpandableListAdapter(this,listDataHeader,listHash);
-        listView.setAdapter(listAdapter);
-
+        getProducts();
         toolbar.setTitle(getResources().getString(R.string.toolbar_title_business));
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-    private void initData() {
-        listDataHeader=new ArrayList<>();
-        listHash= new HashMap<>();
+    private void getProducts(){
+        final ProductsService productsService=new ProductsService();
+        productsService.getBusinessProducts(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                e.printStackTrace();
+            }
 
-        listDataHeader.add("One Connect Express");
-        listDataHeader.add("Cloud Storage");
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                products=new ArrayList<>();
+                products = productsService.processResaults(response);
+                BusinessProductsActivity.this.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        listDataHeader=new ArrayList<>();
+                        listHash=new HashMap<>();
+                        listDescription=new ArrayList<>();
 
-
-        List<String> oneconnect=new ArrayList<>();
-        oneconnect.add("This is a bundled communication package which offers a fixed voice landline and a fixed Internet connection transmitted through fibre.\n" +
-                "\n" +
-                "With Safaricom One Connect Express, there is no need to invest in a separate fixed landline and internet. This is a hybrid (Post-pay & Pre-pay) solution and provides a communication package that bundles voice and unlimited internet at an affordable cost.");
-
-        List<String> cloudStorage=new ArrayList<>();
-        cloudStorage.add("Securely store information online on the Safaricom Cloud.\n" +
-                "\n" +
-                "Key Benefits of Cloud Storage\n" +
-                "Enables you to efficiently store, manage, and aggregate distributed big data across locations through a single pane of glass. Gain a common view and central management\n" +
-                "Seamless scalability, making it possible to add capacity, applications, locations or tenants to your cloud with zero need to develop or reconfigure\n" +
-                "Reduce administration time and ensure availability. Storage-as-a-service capability allows enterprises and service providers to meter capacity, bandwidth, and usage across tenants\n" +
-                "Enable users to self-manage and access storage. Easy storage access which provides flexible access across networks and platforms for traditional applications, web applications, Microsoft Windows, Linux, and mobile devices\n" +
-                "Allow users and applications instant access to data");
-
-        listHash.put(listDataHeader.get(0),oneconnect);
-        listHash.put(listDataHeader.get(1),cloudStorage);
+                        for(Product product: products){
+                            listDataHeader.add(product.getTitle());
+                            listDescription.add(product.getDescription());
+                            listHash.put(product.getTitle(),listDescription);
+                            listDescription=new ArrayList<>();
+                        }
+                        listAdapter=new ExpandableListAdapter(getApplicationContext(),listDataHeader,listHash);
+                        listView.setAdapter(listAdapter);
+                    }
+                });
+            }
+        });
     }
 }
