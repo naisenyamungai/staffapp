@@ -53,10 +53,7 @@ public class ProductsService {
 
         try{
             String jsonData=response.body().string();
-            //JSONObject productsJSON=new JSONObject(jsonData);
             JSONArray productsArrayJSON = new JSONArray(jsonData);
-            // JSONArray productsArrayJSON=productsJSON.getJSONArray("");
-
 
             if (response.isSuccessful()){
                 for(int i=0; i<productsArrayJSON.length();i++){

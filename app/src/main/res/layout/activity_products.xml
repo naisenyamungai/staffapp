@@ -29,19 +29,6 @@
             android:layout_gravity="center"
             android:text="Knowledge is Power" />
 
-        <!--<EditText-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:hint="Type your question here"-->
-            <!--android:background="@color/colorTextIcons"-->
-            <!--android:padding="10dp"/>-->
-
-        <!--<Button-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginTop="5dp"-->
-            <!--android:text="Search"-->
-            <!--android:background="@color/colorAccent" />-->
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.cardview.widget.CardView

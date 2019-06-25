@@ -1,8 +1,5 @@
 package com.staff.staffapp.model;
 
-//import org.parceler.Parcel;
-//
-//@Parcel
 public class Product {
     int id;
     String title;
