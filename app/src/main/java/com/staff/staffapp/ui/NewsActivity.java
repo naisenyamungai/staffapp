@@ -1,4 +1,4 @@
-package com.staff.staffapp;
+package com.staff.staffapp.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.staff.staffapp.service.GeneralNewsServiceAPI;
+import com.staff.staffapp.R;
 
 import java.util.List;
 
@@ -56,12 +59,12 @@ public class NewsActivity extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        final NewsService service = retrofit.create(NewsService.class);
+        final GeneralNewsServiceAPI service = retrofit.create(GeneralNewsServiceAPI.class);
 
         mgeneralNewsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Call<List> createCall = service.all();
+                Call<List> createCall = service.getAllGeneralNews();
 
             }
 

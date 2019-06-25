@@ -1,4 +1,4 @@
-package com.staff.staffapp;
+package com.staff.staffapp.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.widget.ProgressBar;
+
+import com.staff.staffapp.R;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
