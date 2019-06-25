@@ -81,10 +81,8 @@ public class PersonalProductsActivity extends AppCompatActivity {
                             listDataHeader.add(product.getTitle());
                             listDescription.add(product.getDescription());
                             listHash.put(product.getTitle(),listDescription);
-
-                            Log.d("Personal", "run: in personal activity ");
+                            listDescription=new ArrayList<>();
                         }
-
                         listAdapter=new ExpandableListAdapter(getApplicationContext(),listDataHeader,listHash);
                         listView.setAdapter(listAdapter);
                     }
