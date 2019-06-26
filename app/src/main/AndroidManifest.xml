@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.staff.staffapp">
-
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -140,6 +140,21 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.staff.staffapp.ui.MainActivity" />
+        <activity android:name=".ui.PersonalProductsActivity"
+            android:theme="@style/ProductsTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.ProductsActivity" />
+        </activity>
+        <activity
+            android:theme="@style/ProductsTheme"
+            android:name=".ui.ProductsActivity" >
+        </activity>
+        <activity android:name=".ui.BusinessProductsActivity"
+            android:theme="@style/ProductsTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.ProductsActivity" />
         </activity>
         <activity android:name=".ui.MainActivity">
             <intent-filter>
@@ -148,6 +163,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

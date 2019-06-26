@@ -9,8 +9,9 @@ import android.widget.Button;
 
 import com.staff.staffapp.R;
 
-public class MainActivity extends AppCompatActivity {
-    private Button mFAQButton;
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    Button mViewProductsButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,5 +26,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        mViewProductsButton=(Button) findViewById(R.id.viewProductsButton);
+        mViewProductsButton.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View view) {
+        if(view==mViewProductsButton){
+            Intent intent=new Intent(MainActivity.this, ProductsActivity.class);
+            startActivity(intent);
+        }
     }
 }
