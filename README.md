@@ -39,3 +39,8 @@ _Sam Ngigi (My instructor)_
 *This software is licensed under the MIT license.*
 
 Copyright (c) 2019 **_Margaret Mutungi_**
+    News
+
+## Authors
+    [Eric Wafula Wanyama]
+    [Robert Kagema Njiriri]

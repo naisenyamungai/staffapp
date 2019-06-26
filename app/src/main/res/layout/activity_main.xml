@@ -17,7 +17,6 @@
         android:text="PRODUCTS"
         android:textColor="@color/colorTextIcons" />
 
-
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,5 +26,15 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:textColor="@color/colorTextIcons"/>
+
+    <Button
+        android:id="@+id/newsActivityButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="119dp"
+        android:background="@color/colorThemeColor"
+        android:text="@string/news_button"
+        android:textColor="@color/colorTextIcons" />
 
 </RelativeLayout>
