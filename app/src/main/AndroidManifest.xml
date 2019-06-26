@@ -136,7 +136,7 @@
         <activity
             android:name=".ui.FAQ"
             android:theme="@style/FaqTheme"
-            android:label="Frequently Asked Questions">
+            android:label="Frequently Asked Questions"/>
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.staff.staffapp.ui.MainActivity" />

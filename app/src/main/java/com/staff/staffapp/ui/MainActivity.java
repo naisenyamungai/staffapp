@@ -10,7 +10,7 @@ import android.widget.Button;
 import com.staff.staffapp.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
+    private Button mFAQButton;
     Button mViewProductsButton;
 
     @Override
