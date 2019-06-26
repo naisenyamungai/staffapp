@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.ExpandableListView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.staff.staffapp.adapter.ExpandableListAdapter;
+import com.staff.staffapp.adapter.ExpandableListAdapterFaq;
 import com.staff.staffapp.R;
 
 import java.util.ArrayList;
@@ -21,7 +21,7 @@ import java.util.List;
 public class Emergency extends AppCompatActivity {
 
     private ExpandableListView listView;
-    private ExpandableListAdapter listAdapter;
+    private ExpandableListAdapterFaq listAdapter;
     private List<String> listDataHeader;
     private HashMap<String, List<String>> listHash;
 
@@ -33,7 +33,7 @@ public class Emergency extends AppCompatActivity {
 
         listView = (ExpandableListView) findViewById(R.id.lvExp);
         initData();
-        listAdapter = new ExpandableListAdapter(this, listDataHeader, listHash);
+        listAdapter = new ExpandableListAdapterFaq(this, listDataHeader, listHash);
         listView.setAdapter(listAdapter);
 
         listView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {

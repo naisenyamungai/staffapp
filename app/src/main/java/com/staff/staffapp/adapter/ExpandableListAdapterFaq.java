@@ -13,12 +13,12 @@ import com.staff.staffapp.R;
 import java.util.HashMap;
 import java.util.List;
 
-public class ExpandableListAdapter extends BaseExpandableListAdapter {
+public class ExpandableListAdapterFaq extends BaseExpandableListAdapter {
     private Context context;
     private List<String> listDataHeader;
     private HashMap<String, List<String>> listHashMap;
 
-    public ExpandableListAdapter(Context context, List<String> listDataHeader, HashMap<String, List<String>> listHashMap){
+    public ExpandableListAdapterFaq(Context context, List<String> listDataHeader, HashMap<String, List<String>> listHashMap){
         this.context = context;
         this.listDataHeader = listDataHeader;
         this.listHashMap = listHashMap;
@@ -65,7 +65,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         if(view == null)
         {
             LayoutInflater inflater = (LayoutInflater)this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = inflater.inflate(R.layout.list_group,null);
+            view = inflater.inflate(R.layout.list_group_faq,null);
         }
         TextView lblListHeader = view.findViewById(R.id.lblListHeader);
         lblListHeader.setTypeface(null, Typeface.BOLD);
@@ -79,7 +79,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         if(view == null)
         {
             LayoutInflater inflater= (LayoutInflater)this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = inflater.inflate(R.layout.list_item,null);
+            view = inflater.inflate(R.layout.list_item_faq,null);
         }
         TextView txtListChild = (TextView)view.findViewById(R.id.lblListItem);
         txtListChild.setText(childText);
