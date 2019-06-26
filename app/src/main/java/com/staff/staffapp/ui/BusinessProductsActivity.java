@@ -6,7 +6,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.os.Bundle;
 import android.widget.ExpandableListView;
 
-import com.staff.staffapp.adapter.ExpandableListAdapter;
+import com.staff.staffapp.adapter.ExpandableListAdapterProducts;
 import com.staff.staffapp.R;
 import com.staff.staffapp.model.Product;
 import com.staff.staffapp.service.ProductsService;
@@ -24,7 +24,7 @@ import okhttp3.Response;
 
 public class BusinessProductsActivity extends AppCompatActivity {
 
-    private ExpandableListAdapter listAdapter;
+    private ExpandableListAdapterProducts listAdapter;
     private List<String> listDataHeader;
     private HashMap<String,List<String>> listHash;
     private List<Product> products;
@@ -70,7 +70,7 @@ public class BusinessProductsActivity extends AppCompatActivity {
                             listHash.put(product.getTitle(),listDescription);
                             listDescription=new ArrayList<>();
                         }
-                        listAdapter=new ExpandableListAdapter(getApplicationContext(),listDataHeader,listHash);
+                        listAdapter=new ExpandableListAdapterProducts(getApplicationContext(),listDataHeader,listHash);
                         listView.setAdapter(listAdapter);
                     }
                 });
