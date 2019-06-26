@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:text=""
         android:layout_below="@+id/newsActivityButton"
-        android:id="@+id/allNews"/>
+        android:id="@+id/allGeneralNews"/>
 
     <ListView
         android:id="@+id/newsListView"
@@ -40,7 +40,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/departmentButton"
+        android:id="@+id/departmentNewsButton"
         android:text="@string/department_button"
         android:background="@color/colorThemeColor"
         android:textColor="@color/colorTextIcons"
