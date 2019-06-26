@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:layout_above="@id/bottomNav"
     android:background="@drawable/rectanglebackgroundwhite"
-    tools:context="com.staff.staffapp.ui.Emergency">
+    tools:context="com.staff.staffapp.faq.Emergency">
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.staff.staffapp.R;
+import com.staff.staffapp.faq.ProductsActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button mFAQButton;

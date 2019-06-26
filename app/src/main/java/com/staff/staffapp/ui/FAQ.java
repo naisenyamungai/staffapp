@@ -11,6 +11,12 @@ import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.staff.staffapp.R;
+import com.staff.staffapp.faq.Contacts;
+import com.staff.staffapp.faq.Emergency;
+import com.staff.staffapp.faq.Ethics;
+import com.staff.staffapp.faq.Jobs;
+import com.staff.staffapp.faq.Leave;
+import com.staff.staffapp.faq.Medical;
 
 public class FAQ extends AppCompatActivity implements View.OnClickListener {
 

@@ -9,87 +9,87 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.Nursing"
+        <activity android:name=".faq.Nursing"
             android:label="Home Nursing Services">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.staff.staffapp.ui.Medical" />
+                android:value="com.staff.staffapp.faq.Medical" />
         </activity>
-        <activity android:name=".ui.Labs"
+        <activity android:name=".faq.Labs"
             android:label="Labs">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.staff.staffapp.ui.Medical" />
+                android:value="com.staff.staffapp.faq.Medical" />
         </activity>
-        <activity android:name=".ui.Radiology"
+        <activity android:name=".faq.Radiology"
             android:label="Radiology">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.staff.staffapp.ui.Medical" />
+                android:value="com.staff.staffapp.faq.Medical" />
         </activity>
-        <activity android:name=".ui.Physiotherapy"
+        <activity android:name=".faq.Physiotherapy"
             android:label="Physiotherapy">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.staff.staffapp.ui.Medical" />
+                android:value="com.staff.staffapp.faq.Medical" />
         </activity>
-        <activity android:name=".ui.Pharmacies"
+        <activity android:name=".faq.Pharmacies"
             android:label="Pharmacies">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.staff.staffapp.ui.Medical" />
+                android:value="com.staff.staffapp.faq.Medical" />
         </activity>
-        <activity android:name=".ui.Ambulance"
+        <activity android:name=".faq.Ambulance"
             android:label="Ambulance and Air Evacuations">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.staff.staffapp.ui.Medical" />
+                android:value="com.staff.staffapp.faq.Medical" />
         </activity>
-        <activity android:name=".ui.Overseas"
+        <activity android:name=".faq.Overseas"
             android:label="Overseas Providers">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.staff.staffapp.ui.Medical" />
+                android:value="com.staff.staffapp.faq.Medical" />
         </activity>
-        <activity android:name=".ui.North"
+        <activity android:name=".faq.North"
             android:label="North Eastern Providers">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.staff.staffapp.ui.Medical" />
+                android:value="com.staff.staffapp.faq.Medical" />
         </activity>
-        <activity android:name=".ui.Central"
+        <activity android:name=".faq.Central"
             android:label="Central Providers">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.staff.staffapp.ui.Medical" />
+                android:value="com.staff.staffapp.faq.Medical" />
         </activity>
-        <activity android:name=".ui.Eastern"
+        <activity android:name=".faq.Eastern"
             android:label="Eastern Providers">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.staff.staffapp.ui.Medical" />
+                android:value="com.staff.staffapp.faq.Medical" />
         </activity>
-        <activity android:name=".ui.Nyanza"
+        <activity android:name=".faq.Nyanza"
             android:label="Rift, Western/Nyanza Providers">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.staff.staffapp.ui.Medical" />
+                android:value="com.staff.staffapp.faq.Medical" />
         </activity>
-        <activity android:name=".ui.Coast"
+        <activity android:name=".faq.Coast"
             android:label="Coast Providers">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.staff.staffapp.ui.Medical" />
+                android:value="com.staff.staffapp.faq.Medical" />
         </activity>
-        <activity android:name=".ui.Nairobi"
+        <activity android:name=".faq.Nairobi"
             android:label="Nairobi Providers">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.staff.staffapp.ui.Medical" />
+                android:value="com.staff.staffapp.faq.Medical" />
         </activity>
-        <activity android:name=".ui.Panel" />
+        <activity android:name=".faq.Panel" />
         <activity
-            android:name=".ui.Medical"
+            android:name=".faq.Medical"
             android:theme="@style/LeaveTheme"
             android:label="Medical Specialists">
             <meta-data
@@ -97,14 +97,14 @@
                 android:value="com.staff.staffapp.ui.FAQ" />
         </activity>
         <activity
-            android:name=".ui.Emergency"
+            android:name=".faq.Emergency"
             android:label="Emergency Contacts">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.staff.staffapp.ui.FAQ" />
         </activity>
         <activity
-            android:name=".ui.Leave"
+            android:name=".faq.Leave"
             android:theme="@style/LeaveTheme"
             android:label="Leave Days">
             <meta-data
@@ -112,7 +112,7 @@
                 android:value="com.staff.staffapp.ui.FAQ" />
         </activity>
         <activity
-            android:name=".ui.Jobs"
+            android:name=".faq.Jobs"
             android:theme="@style/LeaveTheme"
             android:label="Jobs">
             <meta-data
@@ -120,14 +120,14 @@
                 android:value="com.staff.staffapp.ui.FAQ" />
         </activity>
         <activity
-            android:name=".ui.Ethics"
+            android:name=".faq.Ethics"
             android:label="Ethics HotLine">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.staff.staffapp.ui.FAQ" />
         </activity>
         <activity
-            android:name=".ui.Contacts"
+            android:name=".faq.Contacts"
             android:label="Staff Contact Information">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -140,21 +140,21 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.staff.staffapp.ui.MainActivity" />
-        <activity android:name=".ui.PersonalProductsActivity"
+        <activity android:name=".faq.PersonalProductsActivity"
             android:theme="@style/ProductsTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ui.ProductsActivity" />
+                android:value=".faq.ProductsActivity" />
         </activity>
         <activity
             android:theme="@style/ProductsTheme"
-            android:name=".ui.ProductsActivity" >
+            android:name=".faq.ProductsActivity" >
         </activity>
-        <activity android:name=".ui.BusinessProductsActivity"
+        <activity android:name=".faq.BusinessProductsActivity"
             android:theme="@style/ProductsTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ui.ProductsActivity" />
+                android:value=".faq.ProductsActivity" />
         </activity>
         <activity android:name=".ui.MainActivity">
             <intent-filter>
