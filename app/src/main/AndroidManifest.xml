@@ -4,16 +4,15 @@
     package="com.staff.staffapp">
 
     <application
-        android:label="@string/app_name"
         android:allowBackup="true"
         android:icon="@drawable/staffapp"
+        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".BusinessSchool">
-
-        </activity>
+        <activity android:name=".DetailActivity"></activity>
+        <activity android:name=".BusinessSchool"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,4 +21,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>
