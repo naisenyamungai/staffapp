@@ -18,7 +18,8 @@ public class ExpandableListAdapterProducts extends BaseExpandableListAdapter {
     private List<String> listDataHeader;
     private HashMap<String, List<String>> listHashMap;
 
-    public ExpandableListAdapterProducts(Context context, List<String> listDataHeader, HashMap<String, List<String>> listHashMap) {
+    public ExpandableListAdapterProducts(Context context, List<String> listDataHeader,
+            HashMap<String, List<String>> listHashMap) {
         this.context = context;
         this.listDataHeader = listDataHeader;
         this.listHashMap = listHashMap;
@@ -62,13 +63,13 @@ public class ExpandableListAdapterProducts extends BaseExpandableListAdapter {
 
     @Override
     public View getGroupView(int i, boolean b, View view, ViewGroup viewGroup) {
-        String headerTitile=(String)getGroup(i);
-        if(view==null){
-            LayoutInflater inflater=(LayoutInflater)this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view=inflater.inflate(R.layout.list_group_products, null );
+        String headerTitile = (String) getGroup(i);
+        if (view == null) {
+            LayoutInflater inflater = (LayoutInflater) this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            view = inflater.inflate(R.layout.list_group_products, null);
         }
 
-        TextView lblListHeader=(TextView)view.findViewById(R.id.lblListHeader);
+        TextView lblListHeader = (TextView) view.findViewById(R.id.lblListHeader);
         lblListHeader.setTypeface(null, Typeface.BOLD);
         lblListHeader.setText(headerTitile);
         return view;
@@ -76,13 +77,13 @@ public class ExpandableListAdapterProducts extends BaseExpandableListAdapter {
 
     @Override
     public View getChildView(int i, int i1, boolean b, View view, ViewGroup viewGroup) {
-        final String childText=(String)getChild(i,i1);
-        if(view==null){
-            LayoutInflater inflater=(LayoutInflater)this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view=inflater.inflate(R.layout.list_item_products,null);
+        final String childText = (String) getChild(i, i1);
+        if (view == null) {
+            LayoutInflater inflater = (LayoutInflater) this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            view = inflater.inflate(R.layout.list_item_products, null);
         }
 
-        TextView txtListChild=(TextView)view.findViewById(R.id.lblListItem);
+        TextView txtListChild = (TextView) view.findViewById(R.id.lblListItem);
         txtListChild.setText(childText);
         return view;
     }

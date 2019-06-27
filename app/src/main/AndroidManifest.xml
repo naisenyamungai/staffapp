@@ -181,6 +181,13 @@
         <activity android:name=".school.DataScienceActivity" />
         <activity android:name=".school.DetailActivity" />
         <activity android:name=".school.BusinessSchool" />
+        <activity android:name=".ui.ProductLandingActivity"
+            android:theme="@style/ProductsTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.MainActivity">
+            </meta-data>
+        </activity>
         <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

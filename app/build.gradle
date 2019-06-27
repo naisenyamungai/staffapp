@@ -52,6 +52,8 @@ dependencies {
         exclude module: ['exifinterface', 'support-annotations']
     }
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
     testImplementation 'junit:junit:4.12'
     implementation 'androidx.appcompat:appcompat:1.0.2'
     androidTestImplementation 'androidx.test:runner:1.2.0'
