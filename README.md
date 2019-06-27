@@ -14,7 +14,7 @@ This is a tabbed layout to display Safaricom Products and Services.
 
 ## Specs
 The Main Activity has a button that when clicked moves to the products and services page.
-There are two tabs: Personal and Business tabs that one should be able to switch between by swiping or touching. The page contains and Up button that leads back to the Main Activity. 
+There are two tabs: Personal and Business tabs that one should be able to switch between by swiping or touching. The page contains and Up button that leads back to the Main Activity. The pages are populated from an API.
 
 ## Setup
 Clone the project and build it locally on Android Studio then run on Android phone or emulator
