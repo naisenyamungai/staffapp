@@ -7,4 +7,5 @@
     <string name="card_text">demo_card_text</string>
     <string name="app_name">staffapp</string>
     <string name="ruby">Ruby</string>
+    <string name="title_activity_marketing">MarketingActivity</string>
 </resources>

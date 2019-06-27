@@ -11,7 +11,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".DataScienceActivity"></activity>
+        <activity android:name=".CommunicationActivity"></activity>
+        <activity android:name=".FinanceActivity" />
+        <activity android:name=".ManagementActivity" />
+        <activity
+            android:name=".MarketingActivity"
+            android:label="@string/title_activity_marketing"
+            android:theme="@style/NoActionBar" />
+        <activity android:name=".ItilActivity" />
+        <activity android:name=".AgileActivity" />
+        <activity android:name=".DevActivity" />
+        <activity android:name=".CyberSecActivity" />
+        <activity android:name=".DataScienceActivity" />
         <activity android:name=".DetailActivity" />
         <activity android:name=".BusinessSchool" />
         <activity android:name=".MainActivity">

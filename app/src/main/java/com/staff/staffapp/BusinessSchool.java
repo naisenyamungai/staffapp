@@ -31,6 +31,15 @@ public class BusinessSchool extends AppCompatActivity implements View.OnClickLis
         communicationCard = (CardView) findViewById(R.id.communications_card);
 
         dataCard.setOnClickListener(this);
+        cybersecCard.setOnClickListener(this);
+        devCard.setOnClickListener(this);
+        agileCard.setOnClickListener(this);
+        itilCard.setOnClickListener(this);
+        marketingCard.setOnClickListener(this);
+        managementCard.setOnClickListener(this);
+        financeCard.setOnClickListener(this);
+        communicationCard.setOnClickListener(this);
+
 
 
 
@@ -47,6 +56,9 @@ public class BusinessSchool extends AppCompatActivity implements View.OnClickLis
         switch (view.getId())
         {
             case R.id.data_card : i = new Intent(this, DataScienceActivity.class); startActivity(i); break;
+            case R.id.cybersec_card : i = new Intent(this, CyberSecActivity.class); startActivity(i); break;
+            case R.id.dev_card : i = new Intent(this, CyberSecActivity.class); startActivity(i); break;
+            case R.id.agile_card : i = new Intent(this, AgileActivity.class); startActivity(i); break;
             default:break;
         }
     }
