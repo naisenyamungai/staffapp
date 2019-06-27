@@ -11,4 +11,9 @@
         android:layout_height="match_parent"
         android:text="Personal Products and Services" />
 
+    <ExpandableListView
+        android:id="@+id/lvExpandablePersonal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ExpandableListView>
 </FrameLayout>
