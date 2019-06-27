@@ -1,14 +1,14 @@
-package com.staff.staffapp;
+package com.staff.staffapp.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
-import android.widget.TableLayout;
 
-import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
+import com.staff.staffapp.adapter.PageAdapter;
+import com.staff.staffapp.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
