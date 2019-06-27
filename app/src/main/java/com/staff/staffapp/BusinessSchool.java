@@ -59,6 +59,11 @@ public class BusinessSchool extends AppCompatActivity implements View.OnClickLis
             case R.id.cybersec_card : i = new Intent(this, CyberSecActivity.class); startActivity(i); break;
             case R.id.dev_card : i = new Intent(this, CyberSecActivity.class); startActivity(i); break;
             case R.id.agile_card : i = new Intent(this, AgileActivity.class); startActivity(i); break;
+            case R.id.itil_card : i = new Intent(this, ItilActivity.class); startActivity(i); break;
+            case R.id.marketing_card : i = new Intent(this, MarketingActivity.class); startActivity(i); break;
+            case R.id.management_card : i = new Intent(this, ManagementActivity.class); startActivity(i); break;
+            case R.id.finance_card : i = new Intent(this, FinanceActivity.class); startActivity(i); break;
+            case R.id.communications_card : i = new Intent(this, CommunicationActivity.class); startActivity(i); break;
             default:break;
         }
     }
