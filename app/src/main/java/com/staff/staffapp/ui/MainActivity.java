@@ -12,11 +12,12 @@ import com.staff.staffapp.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.staff.staffapp.faq.ProductsActivity;
+import com.staff.staffapp.school.BusinessSchool;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button mFAQButton;
     Button mViewProductsButton;
-
+    Button btn;
     @BindView(R.id.newsActivityButton)
     Button mNewsActivityButton;
 
@@ -25,8 +26,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button btn;
         ButterKnife.bind(this);
+        btn = findViewById(R.id.button);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, BusinessSchool.class));
+            }
+        });
+
         mFAQButton = (Button) findViewById(R.id.faq_button);
+
         mFAQButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
-        mNewsActivityButton.setOnClickListener (new View.OnClickListener() {
+        mNewsActivityButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> daudi
 arguments=
 auto.sync=false
 build.scans.enabled=false
@@ -12,7 +15,10 @@ offline.mode=false
 override.workspace.settings=true
 show.console.view=true
 show.executions.view=true
+<<<<<<< HEAD
 =======
 connection.project.dir=
 eclipse.preferences.version=1
 >>>>>>> feature/news
+=======
+>>>>>>> daudi

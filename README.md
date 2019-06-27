@@ -44,3 +44,9 @@ Copyright (c) 2019 **_Margaret Mutungi_**
 ## Authors
     [Eric Wafula Wanyama]
     [Robert Kagema Njiriri]
+## Project Name
+           Safaricom Business School
+
+## Author
+            [David Mwaniki Njiru]
+            [Elvis Makuthi]
