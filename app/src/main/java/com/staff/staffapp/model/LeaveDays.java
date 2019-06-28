@@ -9,6 +9,18 @@ public class LeaveDays {
     int taken;
     int balance;
 
+    public LeaveDays(){}
+
+    public LeaveDays(int id, String type, String staff, int entitled, int carryover, int taken, int balance){
+        this.id = id;
+        this.type = type;
+        this.staff = staff;
+        this.entitled = entitled;
+        this.carryover = carryover;
+        this.taken = taken;
+        this.balance = balance;
+    }
+
     public int getId() {
         return id;
     }
