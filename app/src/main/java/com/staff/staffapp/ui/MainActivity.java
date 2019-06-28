@@ -1,6 +1,7 @@
 package com.staff.staffapp.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,11 +16,11 @@ import com.staff.staffapp.faq.ProductsActivity;
 import com.staff.staffapp.school.BusinessSchool;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button mFAQButton;
-    Button mViewProductsButton;
-    Button btn;
+    private CardView mFAQButton;
+    CardView mViewProductsButton;
+    CardView btn;
     @BindView(R.id.newsActivityButton)
-    Button mNewsActivityButton;
+    CardView mNewsActivityButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +28,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btn;
         ButterKnife.bind(this);
         btn = findViewById(R.id.button);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
-        mFAQButton = (Button) findViewById(R.id.faq_button);
+        mFAQButton = (CardView) findViewById(R.id.faq_button);
 
         mFAQButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
-        mViewProductsButton = (Button) findViewById(R.id.viewProductsButton);
+        mViewProductsButton = (CardView) findViewById(R.id.viewProductsButton);
         mViewProductsButton.setOnClickListener(this);
     }
 
