@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.MainActivity">
 
+    //first linear layout for profile
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="420dp"
+        android:layout_height="400dp"
         android:background="@color/profileBackground"
         android:orientation="vertical">
+
+        //circleview profile
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/userProfile"
@@ -24,6 +28,7 @@
             app:civ_border_color="#00C853"
             app:civ_border_width="0dp" />
 
+        //staff name
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -34,6 +39,7 @@
             android:textSize="17sp"
             android:textStyle="bold" />
 
+        //Job Description
         <TextView
             android:id="@+id/jobDescription"
             android:layout_width="wrap_content"
@@ -44,6 +50,8 @@
             android:textColor="#fff"
             android:textSize="15sp"
             android:textStyle="" />
+
+        //My Quick Actions Text
 
         <LinearLayout
             android:layout_width="380dp"
@@ -65,7 +73,7 @@
                 android:textColor="@color/profileBackground"
                 android:textSize="15sp"
                 android:textStyle="bold" />
-            //grid layout
+            //grid layout start
 
             <GridLayout
                 android:layout_width="match_parent"
@@ -76,7 +84,7 @@
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:rowCount="10">
-
+//FAQ/Info hub card
                 <androidx.cardview.widget.CardView
                     android:id="@+id/faq_button"
                     android:layout_width="50dp"
@@ -110,7 +118,7 @@
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
-
+                //To Do card
                 <androidx.cardview.widget.CardView
                     android:id="@+id/todo_card"
                     android:layout_width="50dp"
@@ -144,7 +152,7 @@
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
-
+                //chat card
                 <androidx.cardview.widget.CardView
                     android:id="@+id/chat_card"
                     android:layout_width="50dp"
@@ -178,7 +186,7 @@
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
-
+                //news card
                 <androidx.cardview.widget.CardView
                     android:id="@+id/newsActivityButton"
                     android:layout_width="50dp"
@@ -212,7 +220,7 @@
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
-
+//products and services card
                 <androidx.cardview.widget.CardView
                     android:id="@+id/viewProductsButton"
                     android:layout_width="50dp"
@@ -246,7 +254,7 @@
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
-
+                //eclass card
                 <androidx.cardview.widget.CardView
                     android:id="@+id/button"
                     android:layout_width="50dp"
@@ -284,4 +292,4 @@
 
 
 
-</RelativeLayout>
+</ScrollView>
