@@ -9,10 +9,13 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListView;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.staff.staffapp.R;
 import com.staff.staffapp.adapter.ExpandableListAdapterLeave;
+import com.staff.staffapp.model.LeaveDay;
+import com.staff.staffapp.service.LeaveDaysServiceApi;
 import com.staff.staffapp.ui.FAQ;
 import com.staff.staffapp.ui.MainActivity;
 
@@ -20,42 +23,85 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
+import static java.security.AccessController.getContext;
+
 public class Leave extends AppCompatActivity {
 
     private ExpandableListView listView;
     private ExpandableListAdapterLeave listAdapter;
     private List<String> listDataHeader;
     private HashMap<String, List<String>> listHash;
+    private List<LeaveDay> leaveDays;
+    private List<String> listType;
+//    private List<String> listStaff;
+    private List<Integer> listEntitled;
+    private List<Integer> listCarryover;
+    private List<Integer> listTaken;
+    private List<Integer> listBalance;
+
+
+
+    private TextView textViewLeave;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leave);
 
-        listView = (ExpandableListView) findViewById(R.id.lvExp);
-        getLeaveDays();
-        listAdapter = new ExpandableListAdapterLeave(this, listDataHeader, listHash);
-        listView.setAdapter(listAdapter);
 
-        listView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+        textViewLeave = findViewById(R.id.text_view_Leave);
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://gentle-lake-86049.herokuapp.com/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        LeaveDaysServiceApi leaveDaysServiceApi = retrofit.create(LeaveDaysServiceApi.class);
+
+        Call<List<LeaveDay>> call = leaveDaysServiceApi.getLeaveDays();
+
+        call.enqueue(new Callback<List<LeaveDay>>() {
+
             @Override
-            public boolean onChildClick(ExpandableListView expandableListView, View view, int i, int i1, long l) {
-                Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:" + listHash.get(listDataHeader.get(i)).get(i1)));
-                startActivity(intent);
+            public void onResponse(Call<List<LeaveDay>> call, Response<List<LeaveDay>> response) {
+               if(!response.isSuccessful()){
+                   textViewLeave.setText("Code: " + response.code());
+                   return;
+               }
 
-                return false;
+                List<LeaveDay> leaveDays = response.body();
+
+               for(LeaveDay leaveDay : leaveDays){
+                   String content = "";
+
+                   content += "Type: " + leaveDay.getType() + "\n";
+                   content += "Entitled: " + leaveDay.getEntitled() + "\n";
+                   content += "Carryover: " + leaveDay.getCarryover() + "\n";
+                   content += "Taken: " + leaveDay.getTaken() + "\n";
+                   content += "Balance: " + leaveDay.getBalance() + "\n\n";
+
+                   textViewLeave.append(content);
+               }
+
+            }
+
+            @Override
+            public void onFailure(Call<List<LeaveDay>> call, Throwable t) {
+                textViewLeave.setText(t.getMessage());
             }
         });
+
+
 
         BottomNavigationView bottomNav = (BottomNavigationView) findViewById(R.id.bottomNav);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
     }
-
-    private void getLeaveDays() {
-    }
-
-
 
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =

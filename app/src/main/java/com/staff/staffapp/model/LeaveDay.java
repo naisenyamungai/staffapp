@@ -1,6 +1,6 @@
 package com.staff.staffapp.model;
 
-public class LeaveDays {
+public class LeaveDay {
     int id;
     String type;
     String staff;
@@ -9,9 +9,9 @@ public class LeaveDays {
     int taken;
     int balance;
 
-    public LeaveDays(){}
+    public LeaveDay(){}
 
-    public LeaveDays(int id, String type, String staff, int entitled, int carryover, int taken, int balance){
+    public LeaveDay(int id, String type, String staff, int entitled, int carryover, int taken, int balance){
         this.id = id;
         this.type = type;
         this.staff = staff;
