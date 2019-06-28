@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.MainActivity">
 
-    //first linear layout for profile
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,8 +13,7 @@
         android:background="@color/profileBackground"
         android:orientation="vertical">
 
-        //circleview profile
-
+        //circle-view profile
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/userProfile"
             android:layout_width="70dp"
