@@ -6,9 +6,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -44,7 +46,7 @@ public class Leave extends AppCompatActivity {
     private List<Integer> listCarryover;
     private List<Integer> listTaken;
     private List<Integer> listBalance;
-
+    private ProgressBar progressBarLeave;
 
 
     private TextView textViewLeave;
@@ -53,6 +55,18 @@ public class Leave extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leave);
+
+       init();
+
+       progressBarLeave.setVisibility(View.VISIBLE);
+
+       new Handler().postDelayed(new Runnable(){
+
+           @Override
+           public void run() {
+               progressBarLeave.setVisibility(View.GONE);
+           }
+       }, 500);
 
 
         textViewLeave = findViewById(R.id.text_view_Leave);
@@ -71,6 +85,7 @@ public class Leave extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<LeaveDay>> call, Response<List<LeaveDay>> response) {
                if(!response.isSuccessful()){
+
                    textViewLeave.setText("Code: " + response.code());
                    return;
                }
@@ -102,6 +117,12 @@ public class Leave extends AppCompatActivity {
         BottomNavigationView bottomNav = (BottomNavigationView) findViewById(R.id.bottomNav);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
     }
+
+    private void init() {
+        this.progressBarLeave = findViewById(R.id.progressBarLeave);
+    }
+
+
 
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =

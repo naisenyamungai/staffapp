@@ -29,6 +29,15 @@
                 android:background="@drawable/leave1"
                 android:paddingTop="40dp"
                 android:textSize="40dp"/>
+        
+        <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:id="@+id/progressBarLeave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminateDrawable="@drawable/cpbleavedays"
+            android:gravity="center"
+           />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -43,7 +52,8 @@
                     android:id="@+id/text_view_Leave"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:textColor="@color/safgreen">
+                    android:textColor="@color/safgreen"
+                    android:progress="80">
 
                 </TextView>
 
