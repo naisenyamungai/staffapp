@@ -43,6 +43,9 @@ public class MedicalProviders extends AppCompatActivity {
         specialistsAdapter = new SpecialistsAdapter(specialistProviders, this);
 
         viewPager = findViewById(R.id.specialist_view_pager);
+
+        viewPager = findViewById(R.id.hospital_view_pager);
+
         viewPager.setAdapter(specialistsAdapter);
         viewPager.setPadding(130, 0, 130, 0);
 
