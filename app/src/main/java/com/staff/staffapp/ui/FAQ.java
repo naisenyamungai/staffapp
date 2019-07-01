@@ -17,11 +17,12 @@ import com.staff.staffapp.faq.Ethics;
 import com.staff.staffapp.faq.Jobs;
 import com.staff.staffapp.faq.Leave;
 import com.staff.staffapp.faq.Medical;
+import com.staff.staffapp.faq.MedicalProviders;
 
 public class FAQ extends AppCompatActivity implements View.OnClickListener {
 
 
-    private CardView leaveCard,jobsCard,contactsCard,ethicsCard, emergencyCard, medicalCard;
+    private CardView leaveCard,jobsCard,contactsCard,ethicsCard, emergencyCard, medicalCard, specialistCard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,7 @@ public class FAQ extends AppCompatActivity implements View.OnClickListener {
         ethicsCard = (CardView) findViewById(R.id.ethics_card);
         emergencyCard = (CardView) findViewById(R.id.emergency_card);
         medicalCard = (CardView) findViewById(R.id.medical_card);
+        specialistCard = (CardView) findViewById(R.id.specialist_card);
         //Add Click Listener to the cards
         leaveCard.setOnClickListener(this);
         jobsCard.setOnClickListener(this);
@@ -41,6 +43,7 @@ public class FAQ extends AppCompatActivity implements View.OnClickListener {
         ethicsCard.setOnClickListener(this);
         emergencyCard.setOnClickListener(this);
         medicalCard.setOnClickListener(this);
+        specialistCard.setOnClickListener(this);
 
         BottomNavigationView bottomNav = (BottomNavigationView) findViewById(R.id.bottomNav);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
@@ -75,6 +78,7 @@ public class FAQ extends AppCompatActivity implements View.OnClickListener {
             case R.id.ethics_card : i = new Intent(this, Ethics.class); startActivity(i); break;
             case R.id.emergency_card : i = new Intent(this, Emergency.class); startActivity(i); break;
             case R.id.medical_card : i = new Intent(this, Medical.class); startActivity(i); break;
+            case R.id.specialist_card : i = new Intent(this, MedicalProviders.class); startActivity(i); break;
             default:break;
 
         }

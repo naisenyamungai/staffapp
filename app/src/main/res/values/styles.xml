@@ -14,6 +14,11 @@
         <item name="cardElevation">10dp</item>
     </style>
 
+    <style name="MySwipeCardStyle" parent="Theme.AppCompat.Light">
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardElevation">10dp</item>
+    </style>
+
     <style name="FaqTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/safgreen</item>
     </style>
