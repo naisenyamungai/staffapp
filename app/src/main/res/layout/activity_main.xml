@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.MainActivity">
 
 
@@ -23,8 +24,8 @@
             android:clickable="true"
             android:scaleType="centerCrop"
             android:src="@drawable/kim_profile"
-            app:civ_border_color="#00C853"
-            app:civ_border_width="0dp"
+            app:civ_border_color="#1F2833"
+            app:civ_border_width="1dp"
             android:elevation="10dp"/>
 
         //staff name
@@ -34,7 +35,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="2dp"
             android:text="@string/staff_profile"
-            android:textColor="#fff"
+            android:textColor="#1F2833"
             android:textSize="17sp"
             android:textStyle="bold" />
 
@@ -84,7 +85,7 @@
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:rowCount="10">
-//FAQ/Info hub card
+                //FAQ/Info hub card
                 <androidx.cardview.widget.CardView
                     android:id="@+id/faq_button"
                     android:layout_width="50dp"
@@ -220,7 +221,7 @@
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
-//products and services card
+                //products and services card
                 <androidx.cardview.widget.CardView
                     android:id="@+id/viewProductsButton"
                     android:layout_width="50dp"
