@@ -73,28 +73,28 @@ public class MedicalProviders extends AppCompatActivity {
 
 
         specialistProviders = new ArrayList<>();
-        specialistProviders.add(new SpecialistProvider("Cardiologists", R.drawable));
-        specialistProviders.add(new SpecialistProvider("Chest Specialist", R.drawable));
-        specialistProviders.add(new SpecialistProvider("Counselling", R.drawable));
-        specialistProviders.add(new SpecialistProvider("Dentists", R.drawable));
-        specialistProviders.add(new SpecialistProvider("Dermatologist", R.drawable));
-        specialistProviders.add(new SpecialistProvider("Endocrinologists", R.drawable));
-        specialistProviders.add(new SpecialistProvider("ENT Specialist", R.drawable));
-        specialistProviders.add(new SpecialistProvider("Facial Surgeon", R.drawable));
-        specialistProviders.add(new SpecialistProvider("Gaenacologists", R.drawable));
-        specialistProviders.add(new SpecialistProvider("General Surgeon", R.drawable));
-        specialistProviders.add(new SpecialistProvider("GP Direct", R.drawable));
-        specialistProviders.add(new SpecialistProvider("Haematologist", R.drawable));
-        specialistProviders.add(new SpecialistProvider("Neurologists", R.drawable));
-        specialistProviders.add(new SpecialistProvider("Nephrologist", R.drawable));
-        specialistProviders.add(new SpecialistProvider("Oncologist Gynacologist", R.drawable));
-        specialistProviders.add(new SpecialistProvider("Ophthalmologists", R.drawable));
-        specialistProviders.add(new SpecialistProvider("Orthopedic Surgeons", R.drawable));
-        specialistProviders.add(new SpecialistProvider("Paeditricians", R.drawable));
-        specialistProviders.add(new SpecialistProvider("Psychiatrist", R.drawable));
-        specialistProviders.add(new SpecialistProvider("Urologist", R.drawable));
-        specialistProviders.add(new SpecialistProvider("Radiotherapists", R.drawable));
-        specialistProviders.add(new SpecialistProvider("Rhematologists", R.drawable));
+        specialistProviders.add(new SpecialistProvider("Cardiologists", R.drawable.ic_heart));
+        specialistProviders.add(new SpecialistProvider("Chest Specialist", R.drawable.ic_men_chest));
+        specialistProviders.add(new SpecialistProvider("Counselling", R.drawable.ic_advice));
+        specialistProviders.add(new SpecialistProvider("Dentists", R.drawable.ic_tooth));
+        specialistProviders.add(new SpecialistProvider("Dermatologist", R.drawable.ic_dermatology));
+        specialistProviders.add(new SpecialistProvider("Endocrinologists", R.drawable.ic_thyroid));
+        specialistProviders.add(new SpecialistProvider("ENT Specialist", R.drawable.ic_listen));
+        specialistProviders.add(new SpecialistProvider("Facial Surgeon", R.drawable.ic_anatomy));
+        specialistProviders.add(new SpecialistProvider("Gaenacologists", R.drawable.ic_uterus));
+        specialistProviders.add(new SpecialistProvider("General Surgeon", R.drawable.ic_surgery_room));
+        specialistProviders.add(new SpecialistProvider("GP Direct", R.drawable.ic_stethoscope));
+        specialistProviders.add(new SpecialistProvider("Haematologist", R.drawable.ic_three_test_tubes));
+        specialistProviders.add(new SpecialistProvider("Neurologists", R.drawable.ic_intelligence));
+        specialistProviders.add(new SpecialistProvider("Nephrologist", R.drawable.ic_kidneys));
+        specialistProviders.add(new SpecialistProvider("Oncologist Gynacologist", R.drawable.ic_chemotherapy));
+        specialistProviders.add(new SpecialistProvider("Ophthalmologists", R.drawable.ic_visibility));
+        specialistProviders.add(new SpecialistProvider("Orthopedic Surgeons", R.drawable.ic_orthopedics));
+        specialistProviders.add(new SpecialistProvider("Paeditricians", R.drawable.ic_baby));
+        specialistProviders.add(new SpecialistProvider("Psychiatrist", R.drawable.ic_brain));
+        specialistProviders.add(new SpecialistProvider("Urologist", R.drawable.ic_urology));
+        specialistProviders.add(new SpecialistProvider("Radiotherapists", R.drawable.radiologist));
+        specialistProviders.add(new SpecialistProvider("Rhematologists", R.drawable.ic_bones_joint));
 
 
         supportMedicals = new ArrayList<>();
