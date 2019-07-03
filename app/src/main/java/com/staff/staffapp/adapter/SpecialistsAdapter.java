@@ -1,25 +1,24 @@
 package com.staff.staffapp.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.viewpager.widget.PagerAdapter;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.staff.staffapp.R;
-import com.staff.staffapp.faq.Nairobi;
-
 import com.staff.staffapp.model.SpecialistProvider;
 
 import java.util.List;
 
-public class SpecialistsAdapter extends PagerAdapter {
+public class SpecialistsAdapter extends RecyclerView.Adapter<SpecialistsAdapter.SpecialistViewHolder> {
+
     private List<SpecialistProvider> specialistProviders;
-    private LayoutInflater layoutInflater;
     private Context context;
 
 
@@ -29,45 +28,50 @@ public class SpecialistsAdapter extends PagerAdapter {
     }
 
 
+    @NonNull
     @Override
-    public int getCount() {
+    public SpecialistViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+       LayoutInflater inflater = LayoutInflater.from(context);
+       View view = inflater.inflate(R.layout.specialists, null);
+
+// The below is the longer version of the return statement
+//       SpecialistViewHolder holder = new SpecialistViewHolder(view);
+//       return holder;
+
+       return new SpecialistViewHolder(view);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull SpecialistViewHolder holder, int position) {
+        SpecialistProvider specialistProvider = specialistProviders.get(position);
+
+        holder.title.setText(specialistProvider.getTitle());
+        holder.specialistImage.setImageDrawable(context.getResources().getDrawable(specialistProvider.getImage(), null));
+    }
+
+    @Override
+    public int getItemCount() {
         return specialistProviders.size();
     }
 
-    @Override
-    public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
-        return view.equals(object);
-    }
-
-    @NonNull
-    @Override
-    public Object instantiateItem(@NonNull ViewGroup container, final int position){
-       layoutInflater = LayoutInflater.from(context);
-       View view = layoutInflater.inflate(R.layout.specialists, container, false);
+   class SpecialistViewHolder extends RecyclerView.ViewHolder{
 
         TextView title;
+        LinearLayout specialistLinearLayout;
+        ImageView specialistImage;
 
-        title = view.findViewById(R.id.title);
+        public SpecialistViewHolder(View itemView){
 
-        title.setText(specialistProviders.get(position).getTitle());
+            super(itemView);
 
-        view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, Nairobi.class);
-                intent.putExtra("param", specialistProviders.get(position).getTitle());
-                context.startActivity(intent);
-                // finish();
-            }
-    });
+            title = itemView.findViewById(R.id.title);
+            specialistLinearLayout = (LinearLayout) itemView.findViewById(R.id.specialistLinearLayout);
+            specialistImage = itemView.findViewById(R.id.specialistImage);
 
-container.addView(view, 0);
-return view;
+        }
+
+    }
 }
 
-@Override
-public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object){
-   container.removeView((View)object);
-}
 
-}
+

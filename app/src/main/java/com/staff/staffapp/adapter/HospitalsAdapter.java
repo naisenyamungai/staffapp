@@ -8,17 +8,18 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.viewpager.widget.PagerAdapter;
+import androidx.recyclerview.widget.RecyclerView;
+
 
 import com.staff.staffapp.R;
-import com.staff.staffapp.faq.Nairobi;
+
 import com.staff.staffapp.model.HospitalProvider;
 
 import java.util.List;
 
-public class HospitalsAdapter extends PagerAdapter {
+public class HospitalsAdapter extends RecyclerView.Adapter<HospitalsAdapter.HospitalViewHolder> {
+
     private List<HospitalProvider> hospitalProviders;
-    private LayoutInflater layoutInflater;
     private Context context;
 
     public HospitalsAdapter(List<HospitalProvider> hospitalProviders, Context context) {
@@ -27,43 +28,40 @@ public class HospitalsAdapter extends PagerAdapter {
     }
 
 
+
+    @NonNull
     @Override
-    public int getCount() {
+    public HospitalViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        LayoutInflater inflater = LayoutInflater.from(context);
+        View view = inflater.inflate(R.layout.hospitals, null);
+        return new HospitalViewHolder(view);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull HospitalViewHolder holder, int position) {
+        HospitalProvider hospitalProvider = hospitalProviders.get(position);
+
+        holder.title.setText(hospitalProvider.getTitle());
+    }
+
+    @Override
+    public int getItemCount() {
         return hospitalProviders.size();
     }
 
-    @Override
-    public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
-        layoutInflater = LayoutInflater.from(context);
 
-//        View view
-        View view = layoutInflater.inflate(R.layout.specialists, container, false);
+    class HospitalViewHolder extends RecyclerView.ViewHolder{
 
         TextView title;
 
-        title = view.findViewById(R.id.title);
+        public HospitalViewHolder(View itemView){
 
-        title.setText(hospitalProviders.get(position).getTitle());
+            super(itemView);
 
-        view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, Nairobi.class);
-                intent.putExtra("param", hospitalProviders.get(position).getTitle());
-                context.startActivity(intent);
-                // finish();
-            }
+            title = itemView.findViewById(R.id.title);
 
-
-        });
-        container.addView(view, 0);
-        return view;
-
-    }
-
-        @Override
-        public void destroyItem (@NonNull ViewGroup container, int position, @NonNull Object object){
-            container.removeView((View) object);
         }
+
     }
+}
 

@@ -1,67 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    tools:context=".faq.MedicalProviders">
+    android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="Preferred Hospitals"
-        android:textStyle="bold"
-        android:textSize="16sp"/>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context=".faq.MedicalProviders">
 
-    <androidx.viewpager.widget.ViewPager
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:foregroundGravity="center"
-        android:clipToPadding="false"
-        android:overScrollMode="never"
-        android:layout_centerInParent="true"
-        android:id="@+id/hospital_view_pager">
-    </androidx.viewpager.widget.ViewPager>
-
-    <!--<com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_gravity="center_vertical"-->
-        <!--android:orientation="horizontal"-->
-        <!--app:mrsv_gravity="start"-->
-        <!--app:msrv_ms_per_inch="normal_speed"-->
-        <!--app:msrv_snap_count="1"/>-->
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="Medical Specialists"
-        android:textStyle="bold"
-        android:textSize="16sp"/>
-
-    <!--<com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_gravity="center_vertical"-->
-        <!--android:orientation="horizontal"-->
-        <!--app:mrsv_gravity="center"-->
-        <!--app:msrv_ms_per_inch="low_speed"-->
-        <!--app:msrv_snap_count="2"/>-->
+                <TextView
+                    android:paddingTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Hospitals per Region"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
 
 
-    <androidx.viewpager.widget.ViewPager
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:foregroundGravity="center"
-        android:clipToPadding="false"
-        android:overScrollMode="never"
-        android:layout_centerInParent="true"
-        android:id="@+id/specialist_view_pager">
-    </androidx.viewpager.widget.ViewPager>
+                <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+                    android:id="@+id/hospitals_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:msrv_snap_count="1"/>
+
+                <TextView
+                    android:paddingTop="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Medical Specialists"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+
+                <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+                    android:id="@+id/specialists_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:msrv_snap_count="2"
+                  />
+
+
+                <TextView
+                    android:paddingTop="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Support Services"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+
+                <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+                    android:id="@+id/support_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:msrv_snap_count="2"
+                    />
 
 
 
-</LinearLayout>
+
+        </LinearLayout>
+</ScrollView>

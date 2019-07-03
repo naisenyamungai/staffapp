@@ -1,43 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="160dp"
+    android:layout_height="160dp"
+    android:adjustViewBounds="true"
+    android:layout_margin="5dp"
+
 
     xmlns:card_view="http://schemas.android.com/apk/res-auto">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:paddingTop="30dp"
-        style="@style/MySwipeCardStyle"
-        >
+        <androidx.cardview.widget.CardView
+            android:id="@+id/specialist_card_view"
+            android:layout_width="155dp"
+            android:layout_height="140dp"
+            android:layout_margin="10dp"
+            android:paddingTop="40dp"
+            style="@style/MySwipeCardStyle">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:background="@color/safgreen">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:layout_marginTop="70dp"
-                android:textAlignment="center"
-                android:textSize="20dp"
-                android:layout_centerHorizontal="true"
-                android:textColor="@color/white"
-                android:id="@+id/title"/>
-            <View
+            <LinearLayout
+                android:id="@+id/specialistLinearLayout"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/lightgray"
-                android:layout_marginTop="100dp"/>
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@color/safgreen">
 
-        </RelativeLayout>
+                <ImageView
+                    android:id="@+id/specialistImage"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/ic_hiring"
+                    android:padding="10dp"/>
 
-    </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    android:id="@+id/title"/>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
 
 </LinearLayout>
 
