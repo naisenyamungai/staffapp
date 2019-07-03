@@ -24,7 +24,7 @@
             android:clickable="true"
             android:scaleType="centerCrop"
             android:src="@drawable/kim_profile"
-            app:civ_border_color="#1F2833"
+            app:civ_border_color="@color/white"
             app:civ_border_width="1dp"
             android:elevation="10dp"/>
 
@@ -37,7 +37,7 @@
             android:text="@string/staff_profile"
             android:textColor="#1F2833"
             android:textSize="17sp"
-            android:textStyle="bold" />
+            android:textStyle="" />
 
         //Job Description
         <TextView
@@ -352,16 +352,16 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/action_share"
-                            android:theme="@style/material.button.text"
-                            android:textSize="13sp"/>
+                            android:textSize="13sp"
+                            android:theme="@style/material.button.text" />
 
                         <Button
                             android:id="@+id/explore_action"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/action_explore"
-                            android:theme="@style/material.button.text"
-                            android:textSize="13sp" />
+                            android:textSize="13sp"
+                            android:theme="@style/material.button.text" />
 
                     </LinearLayout>
 
@@ -447,8 +447,6 @@
 
 
 
+
     </LinearLayout>
-
-
-
 </ScrollView>

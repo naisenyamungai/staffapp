@@ -2,6 +2,7 @@ package com.staff.staffapp.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -67,4 +68,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(intent);
         }
     }
+
+    //public class MainActivity extends AppCompatActivity {
+
+    //ViewPager viewPager;
+
+    //viewpager
+
+    //@Override
+    //protected void onCreate(Bundle savedInstanceState) {
+        //super.onCreate(savedInstanceState);
+        //setContentView(R.layout.activity_main);
+
+    //viewPager = (ViewPager) findViewById(R.id.viewPager);
+
+    //ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this);
+
+    //viewPager.setAdapter(viewPagerAdapter);
+
 }
