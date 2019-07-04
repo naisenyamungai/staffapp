@@ -189,32 +189,32 @@ public class MedicalProviders extends AppCompatActivity implements
      }
 
 
-//    @Override
-//    public void onSupportClick(int position) {
-//        supportMedicals.get(position);
-//        final Intent intent;
-//
-//        switch (position){
-//            case 0:
-//                intent = new Intent(this, Ambulance.class); startActivity(intent); break;
-//
-//            case 1:
-//                intent = new Intent(this, Nursing.class); startActivity(intent); break;
-//
-//            case 2:
-//                intent = new Intent(this, Labs.class); startActivity(intent); break;
-//
-//            case 3:
-//                intent = new Intent(this, Pharmacies.class); startActivity(intent); break;
-//
-//            case 4:
-//                intent = new Intent(this, Physiotherapy.class); startActivity(intent); break;
-//
-//            case 5:
-//                intent = new Intent(this, Radiology.class); startActivity(intent); break;
-//
-//        }
-//
-//
-//    }
+    @Override
+    public void onSupportClick(int position) {
+        supportMedicals.get(position);
+        final Intent intent;
+
+        switch (position){
+            case 0:
+                intent = new Intent(this, Ambulance.class); startActivity(intent); break;
+
+            case 1:
+                intent = new Intent(this, Nursing.class); startActivity(intent); break;
+
+            case 2:
+                intent = new Intent(this, Labs.class); startActivity(intent); break;
+
+            case 3:
+                intent = new Intent(this, Pharmacies.class); startActivity(intent); break;
+
+            case 4:
+                intent = new Intent(this, Physiotherapy.class); startActivity(intent); break;
+
+            case 5:
+                intent = new Intent(this, Radiology.class); startActivity(intent); break;
+
+        }
+
+
+    }
 }

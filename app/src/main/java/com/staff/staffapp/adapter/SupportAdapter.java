@@ -35,7 +35,7 @@ public class SupportAdapter extends RecyclerView.Adapter<SupportAdapter.SupportV
     public SupportViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.support_services, null);
-        return new SupportViewHolder(view);
+        return new SupportViewHolder(view, onSupportListener);
 
     }
 
@@ -62,12 +62,14 @@ public class SupportAdapter extends RecyclerView.Adapter<SupportAdapter.SupportV
 
         OnSupportListener  onSupportListener;
 
-        public SupportViewHolder(View itemView){
+        public SupportViewHolder(View itemView, OnSupportListener  onSupportListener){
 
             super(itemView);
 
             title = itemView.findViewById(R.id.title);
             supportImage = itemView.findViewById(R.id.supportImage);
+
+            context = itemView.getContext();
             this.onSupportListener = onSupportListener;
 
             itemView.setOnClickListener(this);
