@@ -2,12 +2,12 @@ package com.staff.staffapp.model;
 
 public class SupportMedical {
     private  String title;
-//    private int image;
+    private int image;
 
-    public SupportMedical(String title){
+    public SupportMedical(String title, int image){
 
         this.title = title;
-//        this.image = image;
+        this.image = image;
     }
 
     public void setTitle(String title) {
@@ -17,12 +17,12 @@ public class SupportMedical {
     public String getTitle() {
         return title;
     }
-//
-//    public int getImage() {
-//        return image;
-//    }
 
-//    public void setImage(int image) {
-//        this.image = image;
-//    }
+    public int getImage() {
+        return image;
+    }
+
+    public void setImage(int image) {
+        this.image = image;
+    }
 }

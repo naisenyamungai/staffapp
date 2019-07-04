@@ -1,5 +1,6 @@
 package com.staff.staffapp.faq;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,8 +10,12 @@ import androidx.viewpager.widget.ViewPager;
 import android.animation.ArgbEvaluator;
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.staff.staffapp.R;
 import com.staff.staffapp.adapter.HospitalsAdapter;
 import com.staff.staffapp.adapter.SpecialistsAdapter;
@@ -18,12 +23,17 @@ import com.staff.staffapp.adapter.SupportAdapter;
 import com.staff.staffapp.model.HospitalProvider;
 import com.staff.staffapp.model.SpecialistProvider;
 import com.staff.staffapp.model.SupportMedical;
+import com.staff.staffapp.ui.FAQ;
+import com.staff.staffapp.ui.MainActivity;
 import com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MedicalProviders extends AppCompatActivity {
+public class MedicalProviders extends AppCompatActivity implements
+        HospitalsAdapter.OnItemListener,
+        SupportAdapter.OnSupportListener
+{
 
     MultiSnapRecyclerView specialistRecyclerView;
     MultiSnapRecyclerView hospitalRecyclerView;
@@ -47,6 +57,8 @@ public class MedicalProviders extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medical_providers);
 
+        initItemViews();
+        
         hospitalProviders = new ArrayList<>();
         specialistProviders = new ArrayList<>();
         supportMedicals = new ArrayList<>();
@@ -98,12 +110,12 @@ public class MedicalProviders extends AppCompatActivity {
 
 
         supportMedicals = new ArrayList<>();
-        supportMedicals.add(new SupportMedical("Ambulance"));
-        supportMedicals.add(new SupportMedical("Home Nursing"));
-        supportMedicals.add(new SupportMedical("Laboratory"));
-        supportMedicals.add(new SupportMedical("Pharmacies"));
-        supportMedicals.add(new SupportMedical("Physiotherapy"));
-        supportMedicals.add(new SupportMedical("Radiology"));
+        supportMedicals.add(new SupportMedical("Ambulance", R.drawable.ambulance));
+        supportMedicals.add(new SupportMedical("Home Nursing", R.drawable.nurse));
+        supportMedicals.add(new SupportMedical("Laboratory", R.drawable.lab));
+        supportMedicals.add(new SupportMedical("Pharmacies", R.drawable.pharmacy));
+        supportMedicals.add(new SupportMedical("Physiotherapy", R.drawable.physiotherapist));
+        supportMedicals.add(new SupportMedical("Radiology", R.drawable.radiology));
 
 
         specialistsAdapter = new SpecialistsAdapter(specialistProviders, this);
@@ -112,17 +124,97 @@ public class MedicalProviders extends AppCompatActivity {
         specialistRecyclerView.setLayoutManager(specialistManager);
 
 
-        hospitalsAdapter = new HospitalsAdapter(hospitalProviders, this);
+        hospitalsAdapter = new HospitalsAdapter(hospitalProviders, this, this);
         hospitalRecyclerView.setAdapter(hospitalsAdapter);
         LinearLayoutManager hospitalManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         hospitalRecyclerView.setLayoutManager(hospitalManager);
 
 
-        supportAdapter = new SupportAdapter(supportMedicals, this);
+        supportAdapter = new SupportAdapter(supportMedicals, this, this);
         supportRecyclerView.setAdapter(supportAdapter);
         LinearLayoutManager supportManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         supportRecyclerView.setLayoutManager(supportManager);
 
-
+        BottomNavigationView bottomNav = (BottomNavigationView) findViewById(R.id.bottomNav);
+        bottomNav.setOnNavigationItemSelectedListener(navListener);
     }
+
+    private void initItemViews() {
+    }
+
+    private BottomNavigationView.OnNavigationItemSelectedListener navListener =
+            new BottomNavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                    Intent i;
+
+                    switch(menuItem.getItemId()){
+                        case R.id.nav_home: i = new Intent(MedicalProviders.this, MainActivity.class); startActivity(i); break;
+                        case R.id.back: i = new Intent(MedicalProviders.this, FAQ.class); startActivity(i); break;
+                    }
+                    return true;
+                }
+            };
+
+    @Override
+    public void onItemClick(int position) {
+       hospitalProviders.get(position);
+       final Intent intent;
+
+       switch (position){
+           case 0:
+               intent = new Intent(this, Coast.class); startActivity(intent); break;
+
+           case 1:
+               intent = new Intent(this, Eastern.class); startActivity(intent); break;
+
+           case 2:
+               intent = new Intent(this, Central.class); startActivity(intent); break;
+
+           case 3:
+               intent = new Intent(this, Nairobi.class); startActivity(intent); break;
+
+           case 4:
+               intent = new Intent(this, North.class); startActivity(intent); break;
+
+           case 5:
+               intent = new Intent(this, Nyanza.class); startActivity(intent); break;
+
+           case 6:
+               intent = new Intent(this, Overseas.class); startActivity(intent); break;
+
+       }
+
+
+     }
+
+
+//    @Override
+//    public void onSupportClick(int position) {
+//        supportMedicals.get(position);
+//        final Intent intent;
+//
+//        switch (position){
+//            case 0:
+//                intent = new Intent(this, Ambulance.class); startActivity(intent); break;
+//
+//            case 1:
+//                intent = new Intent(this, Nursing.class); startActivity(intent); break;
+//
+//            case 2:
+//                intent = new Intent(this, Labs.class); startActivity(intent); break;
+//
+//            case 3:
+//                intent = new Intent(this, Pharmacies.class); startActivity(intent); break;
+//
+//            case 4:
+//                intent = new Intent(this, Physiotherapy.class); startActivity(intent); break;
+//
+//            case 5:
+//                intent = new Intent(this, Radiology.class); startActivity(intent); break;
+//
+//        }
+//
+//
+//    }
 }

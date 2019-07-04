@@ -20,11 +20,13 @@ public class SupportAdapter extends RecyclerView.Adapter<SupportAdapter.SupportV
 
     private List<SupportMedical> supportMedicals;
     private Context context;
+    private OnSupportListener  onSupportListener;
 
 
-    public SupportAdapter(List<SupportMedical> supportMedicals, Context context){
+    public SupportAdapter(List<SupportMedical> supportMedicals, Context context, OnSupportListener  onSupportListener){
         this.supportMedicals = supportMedicals;
         this.context = context;
+        this.onSupportListener = onSupportListener;
     }
 
 
@@ -42,7 +44,7 @@ public class SupportAdapter extends RecyclerView.Adapter<SupportAdapter.SupportV
         SupportMedical supportMedical = supportMedicals.get(position);
         holder.title.setText(supportMedical.getTitle());
 
-//        holder.supportImage.setImageDrawable(context.getResources().getDrawable(supportMedical.getImage(), null));
+        holder.supportImage.setImageDrawable(context.getResources().getDrawable(supportMedical.getImage(), null));
 
     }
 
@@ -53,23 +55,33 @@ public class SupportAdapter extends RecyclerView.Adapter<SupportAdapter.SupportV
     }
 
 
-    class SupportViewHolder extends RecyclerView.ViewHolder{
+    class SupportViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         TextView title;
-//        ImageView supportImage;
-        LinearLayout supportLinearLayout;
+        ImageView supportImage;
+
+        OnSupportListener  onSupportListener;
 
         public SupportViewHolder(View itemView){
 
             super(itemView);
 
             title = itemView.findViewById(R.id.title);
-//            supportImage = itemView.findViewById(R.id.supportImage);
-            supportLinearLayout = (LinearLayout) itemView.findViewById(R.id.supportLinearLayout);
+            supportImage = itemView.findViewById(R.id.supportImage);
+            this.onSupportListener = onSupportListener;
 
+            itemView.setOnClickListener(this);
 
         }
 
+        @Override
+        public void onClick(View view) {
+            onSupportListener.onSupportClick(getAdapterPosition());
+        }
+    }
+
+    public interface OnSupportListener{
+        void onSupportClick(int position);
     }
 }
 

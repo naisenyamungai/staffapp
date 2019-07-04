@@ -13,97 +13,104 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".faq.MedicalProviders"></activity>
+        <activity
+            android:name=".faq.MedicalProviders"
+            android:label="Medical Providers"
+            android:theme="@style/LeaveTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.staff.staffapp.ui.FAQ" />
+        </activity>
         <activity
             android:name=".faq.Nursing"
             android:label="Home Nursing Services">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.staff.staffapp.faq.Medical" />
+                android:value="com.staff.staffapp.faq.MedicalProviders" />
         </activity>
         <activity
             android:name=".faq.Labs"
             android:label="Labs">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.staff.staffapp.faq.Medical" />
+                android:value="com.staff.staffapp.faq.MedicalProviders" />
         </activity>
         <activity
             android:name=".faq.Radiology"
             android:label="Radiology">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.staff.staffapp.faq.Medical" />
+                android:value="com.staff.staffapp.faq.MedicalProviders" />
         </activity>
         <activity
             android:name=".faq.Physiotherapy"
             android:label="Physiotherapy">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.staff.staffapp.faq.Medical" />
+                android:value="com.staff.staffapp.faq.MedicalProviders" />
         </activity>
         <activity
             android:name=".faq.Pharmacies"
             android:label="Pharmacies">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.staff.staffapp.faq.Medical" />
+                android:value="com.staff.staffapp.faq.MedicalProviders" />
         </activity>
         <activity
             android:name=".faq.Ambulance"
             android:label="Ambulance and Air Evacuations">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.staff.staffapp.faq.Medical" />
+                android:value="com.staff.staffapp.faq.MedicalProviders" />
         </activity>
         <activity
             android:name=".faq.Overseas"
             android:label="Overseas Providers">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.staff.staffapp.faq.Medical" />
+                android:value="com.staff.staffapp.faq.MedicalProviders" />
         </activity>
         <activity
             android:name=".faq.North"
             android:label="North Eastern Providers">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.staff.staffapp.faq.Medical" />
+                android:value="com.staff.staffapp.faq.MedicalProviders" />
         </activity>
         <activity
             android:name=".faq.Central"
             android:label="Central Providers">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.staff.staffapp.faq.Medical" />
+                android:value="com.staff.staffapp.faq.MedicalProviders" />
         </activity>
         <activity
             android:name=".faq.Eastern"
             android:label="Eastern Providers">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.staff.staffapp.faq.Medical" />
+                android:value="com.staff.staffapp.faq.MedicalProviders" />
         </activity>
         <activity
             android:name=".faq.Nyanza"
             android:label="Rift, Western/Nyanza Providers">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.staff.staffapp.faq.Medical" />
+                android:value="com.staff.staffapp.faq.MedicalProviders" />
         </activity>
         <activity
             android:name=".faq.Coast"
             android:label="Coast Providers">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.staff.staffapp.faq.Medical" />
+                android:value="com.staff.staffapp.faq.MedicalProviders" />
         </activity>
         <activity
             android:name=".faq.Nairobi"
             android:label="Nairobi Providers">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.staff.staffapp.faq.Medical" />
+                android:value="com.staff.staffapp.faq.MedicalProviders" />
         </activity>
         <activity android:name=".faq.Panel" />
         <activity

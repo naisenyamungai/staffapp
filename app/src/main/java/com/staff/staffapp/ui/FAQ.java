@@ -22,7 +22,8 @@ import com.staff.staffapp.faq.MedicalProviders;
 public class FAQ extends AppCompatActivity implements View.OnClickListener {
 
 
-    private CardView leaveCard,jobsCard,contactsCard,ethicsCard, emergencyCard, medicalCard, specialistCard;
+    private CardView leaveCard,jobsCard,contactsCard,ethicsCard, emergencyCard,  specialistCard;
+//    medicalCard
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +35,7 @@ public class FAQ extends AppCompatActivity implements View.OnClickListener {
         contactsCard = (CardView) findViewById(R.id.contacts_card);
         ethicsCard = (CardView) findViewById(R.id.ethics_card);
         emergencyCard = (CardView) findViewById(R.id.emergency_card);
-        medicalCard = (CardView) findViewById(R.id.medical_card);
+//        medicalCard = (CardView) findViewById(R.id.medical_card);
         specialistCard = (CardView) findViewById(R.id.specialist_card);
         //Add Click Listener to the cards
         leaveCard.setOnClickListener(this);
@@ -42,7 +43,7 @@ public class FAQ extends AppCompatActivity implements View.OnClickListener {
         contactsCard.setOnClickListener(this);
         ethicsCard.setOnClickListener(this);
         emergencyCard.setOnClickListener(this);
-        medicalCard.setOnClickListener(this);
+//        medicalCard.setOnClickListener(this);
         specialistCard.setOnClickListener(this);
 
         BottomNavigationView bottomNav = (BottomNavigationView) findViewById(R.id.bottomNav);
@@ -77,7 +78,7 @@ public class FAQ extends AppCompatActivity implements View.OnClickListener {
             case R.id.contacts_card : i = new Intent(this, Contacts.class); startActivity(i);  break;
             case R.id.ethics_card : i = new Intent(this, Ethics.class); startActivity(i); break;
             case R.id.emergency_card : i = new Intent(this, Emergency.class); startActivity(i); break;
-            case R.id.medical_card : i = new Intent(this, Medical.class); startActivity(i); break;
+//            case R.id.medical_card : i = new Intent(this, Medical.class); startActivity(i); break;
             case R.id.specialist_card : i = new Intent(this, MedicalProviders.class); startActivity(i); break;
             default:break;
 
