@@ -18,7 +18,8 @@
                     android:layout_margin="5dp"
                     android:text="Hospitals per Region"
                     android:textStyle="bold"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp"
+                    android:textColor="#000000"/>
 
 
                 <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
@@ -36,7 +37,8 @@
                     android:layout_margin="5dp"
                     android:text="Medical Specialists"
                     android:textStyle="bold"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp"
+                    android:textColor="#000000"/>
 
                 <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
                     android:id="@+id/specialists_recycler_view"
@@ -55,7 +57,9 @@
                     android:layout_margin="5dp"
                     android:text="Support Services"
                     android:textStyle="bold"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    />
 
                 <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
                     android:id="@+id/support_recycler_view"

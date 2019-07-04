@@ -19,7 +19,9 @@
         <LinearLayout
             android:id="@+id/supportLinearLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
 
             <!--<ImageView-->
                 <!--android:layout_width="155dp"-->
@@ -33,7 +35,7 @@
                 android:textStyle="bold"
                 android:layout_marginTop="50dp"
                 android:textAlignment="center"
-                android:textSize="20dp"
+                android:textSize="16sp"
                 android:layout_centerHorizontal="true"
                 android:textColor="@color/safgreen"
                 android:id="@+id/title"

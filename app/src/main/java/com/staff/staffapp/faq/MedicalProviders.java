@@ -78,7 +78,7 @@ public class MedicalProviders extends AppCompatActivity {
         specialistProviders.add(new SpecialistProvider("Counselling", R.drawable.ic_advice));
         specialistProviders.add(new SpecialistProvider("Dentists", R.drawable.ic_tooth));
         specialistProviders.add(new SpecialistProvider("Dermatologist", R.drawable.ic_dermatology));
-        specialistProviders.add(new SpecialistProvider("Endocrinologists", R.drawable.ic_thyroid));
+        specialistProviders.add(new SpecialistProvider("Endocrinologists", R.drawable.ic_thyroids));
         specialistProviders.add(new SpecialistProvider("ENT Specialist", R.drawable.ic_listen));
         specialistProviders.add(new SpecialistProvider("Facial Surgeon", R.drawable.ic_anatomy));
         specialistProviders.add(new SpecialistProvider("Gaenacologists", R.drawable.ic_uterus));
