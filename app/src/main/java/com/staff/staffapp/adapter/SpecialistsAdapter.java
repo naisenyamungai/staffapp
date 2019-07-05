@@ -20,11 +20,13 @@ public class SpecialistsAdapter extends RecyclerView.Adapter<SpecialistsAdapter.
 
     private List<SpecialistProvider> specialistProviders;
     private Context context;
+    private OnSpecialistListener onSpecialistListener;
 
 
-    public SpecialistsAdapter(List<SpecialistProvider> specialistProviders, Context context){
+    public SpecialistsAdapter(List<SpecialistProvider> specialistProviders, Context context, OnSpecialistListener  onSpecialistListener){
         this.specialistProviders = specialistProviders;
         this.context = context;
+        this.onSpecialistListener = onSpecialistListener;
     }
 
 
@@ -38,7 +40,7 @@ public class SpecialistsAdapter extends RecyclerView.Adapter<SpecialistsAdapter.
 //       SpecialistViewHolder holder = new SpecialistViewHolder(view);
 //       return holder;
 
-       return new SpecialistViewHolder(view);
+       return new SpecialistViewHolder(view, onSpecialistListener);
     }
 
     @Override
@@ -54,22 +56,36 @@ public class SpecialistsAdapter extends RecyclerView.Adapter<SpecialistsAdapter.
         return specialistProviders.size();
     }
 
-   class SpecialistViewHolder extends RecyclerView.ViewHolder{
+   class SpecialistViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         TextView title;
         LinearLayout specialistLinearLayout;
         ImageView specialistImage;
+        OnSpecialistListener  onSpecialistListener;
 
-        public SpecialistViewHolder(View itemView){
+        public SpecialistViewHolder(View itemView, OnSpecialistListener  onSpecialistListener){
 
             super(itemView);
 
             title = itemView.findViewById(R.id.title);
             specialistLinearLayout = (LinearLayout) itemView.findViewById(R.id.specialistLinearLayout);
             specialistImage = itemView.findViewById(R.id.specialistImage);
+            context = itemView.getContext();
+
+            this.onSpecialistListener = onSpecialistListener;
+
+            itemView.setOnClickListener(this);
 
         }
 
+       @Override
+       public void onClick(View view) {
+           onSpecialistListener.onSpecialistClick(getAdapterPosition());
+       }
+   }
+
+    public interface OnSpecialistListener{
+        void onSpecialistClick(int position);
     }
 }
 

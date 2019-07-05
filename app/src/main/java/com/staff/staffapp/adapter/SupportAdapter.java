@@ -43,7 +43,6 @@ public class SupportAdapter extends RecyclerView.Adapter<SupportAdapter.SupportV
     public void onBindViewHolder(@NonNull SupportViewHolder holder, int position) {
         SupportMedical supportMedical = supportMedicals.get(position);
         holder.title.setText(supportMedical.getTitle());
-
         holder.supportImage.setImageDrawable(context.getResources().getDrawable(supportMedical.getImage(), null));
 
     }

@@ -32,7 +32,10 @@ import java.util.List;
 
 public class MedicalProviders extends AppCompatActivity implements
         HospitalsAdapter.OnItemListener,
-        SupportAdapter.OnSupportListener
+        SupportAdapter.OnSupportListener,
+        SpecialistsAdapter.OnSpecialistListener
+
+
 {
 
     MultiSnapRecyclerView specialistRecyclerView;
@@ -119,7 +122,7 @@ public class MedicalProviders extends AppCompatActivity implements
         supportMedicals.add(new SupportMedical("Radiology", R.drawable.radiology));
 
 
-        specialistsAdapter = new SpecialistsAdapter(specialistProviders, this);
+        specialistsAdapter = new SpecialistsAdapter(specialistProviders, this, this);
         specialistRecyclerView.setAdapter(specialistsAdapter);
         LinearLayoutManager specialistManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         specialistRecyclerView.setLayoutManager(specialistManager);
@@ -197,6 +200,82 @@ public class MedicalProviders extends AppCompatActivity implements
 
         switch (position){
             case 0:
+                intent = new Intent(this, Cardiologist.class); startActivity(intent); break;
+
+            case 1:
+                intent = new Intent(this, Chest.class); startActivity(intent); break;
+
+            case 2:
+                intent = new Intent(this, Counselling.class); startActivity(intent); break;
+
+            case 3:
+                intent = new Intent(this, Dentist.class); startActivity(intent); break;
+
+            case 4:
+                intent = new Intent(this, Dermatologist.class); startActivity(intent); break;
+
+            case 5:
+                intent = new Intent(this, Endocrinology.class); startActivity(intent); break;
+
+            case 6:
+                intent = new Intent(this, ENT.class); startActivity(intent); break;
+
+            case 7:
+                intent = new Intent(this, Gaenacologist.class); startActivity(intent); break;
+
+            case 8:
+                intent = new Intent(this, Gastro.class); startActivity(intent); break;
+
+            case 9:
+                intent = new Intent(this, GeneralSurgeon.class); startActivity(intent); break;
+
+            case 10:
+                intent = new Intent(this, GP.class); startActivity(intent); break;
+
+            case 11:
+                intent = new Intent(this, Haematologist.class); startActivity(intent); break;
+
+            case 12:
+                intent = new Intent(this, Neurologist.class); startActivity(intent); break;
+
+            case 13:
+                intent = new Intent(this, Nephrology.class); startActivity(intent); break;
+
+            case 14:
+                intent = new Intent(this, Oncology.class); startActivity(intent); break;
+
+            case 15:
+                intent = new Intent(this, Opthalmologist.class); startActivity(intent); break;
+
+            case 16:
+                intent = new Intent(this, Orthopedic.class); startActivity(intent); break;
+
+            case 17:
+                intent = new Intent(this, Paeditrician.class); startActivity(intent); break;
+
+            case 18:
+                intent = new Intent(this,   Psychiatrist.class); startActivity(intent); break;
+
+            case 19:
+                intent = new Intent(this, Urology.class); startActivity(intent); break;
+
+            case 20:
+                intent = new Intent(this, Radiotherapist.class); startActivity(intent); break;
+
+            case 21:
+                intent = new Intent(this, Rhematology.class); startActivity(intent); break;
+        }
+
+
+    }
+
+    @Override
+    public void onSpecialistClick(int position) {
+        specialistProviders.get(position);
+        final Intent intent;
+
+        switch (position){
+            case 0:
                 intent = new Intent(this, Ambulance.class); startActivity(intent); break;
 
             case 1:
@@ -215,7 +294,6 @@ public class MedicalProviders extends AppCompatActivity implements
                 intent = new Intent(this, Radiology.class); startActivity(intent); break;
 
         }
-
 
     }
 }
