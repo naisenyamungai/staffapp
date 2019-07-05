@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:layout_above="@id/bottomNav"
-    tools:context=".faq.MedicalProviders">
+    tools:context=".faq.ui.MedicalProviders">
 
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainActivity">
+    tools:context=".MainActivity">
     <Button
         android:id="@+id/viewProductsButton"
         android:layout_width="match_parent"
@@ -36,14 +36,6 @@
         android:text="@string/news_button"
         android:textColor="@color/colorTextIcons" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="181dp"
-        android:background="@color/colorThemeColor"
-        android:text="Safaricom Business School"
-        android:textColor="@color/colorTextIcons" />
+
 
 </RelativeLayout>

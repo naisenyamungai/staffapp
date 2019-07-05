@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".faq.Chest">
+    tools:context=".faq.ui.Chest">
 
     <com.github.barteksc.pdfviewer.PDFView
         android:id="@+id/pdfChest"
